@@ -1,38 +1,25 @@
 // Configure PSScriptAnalyzer settings
 {
-  "[powershell]": {
-    "editor.formatOnSave": true
-  },
-  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-  "powershell.codeFormatting.preset": "OTBS",
-  "powershell.codeFormatting.alignPropertyValuePairs": true,
-  "powershell.codeFormatting.ignoreOneLineBlock": true,
-  "json.schemas": [
-    {
-      "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-      "fileMatch": ["bucket/*.json"]
+    "[powershell]": {
+        "editor.formatOnSave": true
+    },
+    "editor.renderFinalNewline": "off",
+    "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+    "powershell.codeFormatting.preset": "OTBS",
+    "powershell.codeFormatting.alignPropertyValuePairs": true,
+    "powershell.codeFormatting.ignoreOneLineBlock": true,
+    "json.schemas": [
+        {
+            "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+            "fileMatch": ["bucket/*.json"]
+        }
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/tmp": true
     }
-  ],
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/tmp": true
-  },
-  "workbench.colorCustomizations": {
-    "commandCenter.border": "#e7e7e799",
-    "editorGroup.border": "#e746e3",
-    "panel.border": "#e746e3",
-    "sash.hoverBorder": "#e746e3",
-    "sideBar.border": "#e746e3",
-    "tab.activeBorder": "#e746e3",
-    "titleBar.activeBackground": "#dd1dd9",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.border": "#dd1dd9",
-    "titleBar.inactiveBackground": "#dd1dd999",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  },
-  "peacock.color": "#dd1dd9"
 }
