@@ -1,5 +1,8 @@
 {
     "autoupdate": {
+        "hash": {
+            "mode": "metalink"
+        },
         "url": "https://files.pharo.org/pharo-launcher/$version/pharo-launcher-$version.msi"
     },
     "bin": [["Pharo.exe", "PharoLauncher", "Pharo.image"]],
