@@ -2,34 +2,17 @@
     "autoupdate": {
         "url": "https://files.pharo.org/pharo-launcher/$version/pharo-launcher-$version.msi"
     },
-    "bin": [
-        [
-            "Pharo.exe",
-            "PharoLauncher",
-            "Pharo.image"
-        ]
-    ],
+    "bin": [["Pharo.exe", "PharoLauncher", "Pharo.image"]],
     "checkver": {
         "github": "https://github.com/pharo-project/pharo-launcher"
     },
     "description": "Pharo is a pure object-oriented programming language and a powerful environment, focused on simplicity and immediate feedback",
     "extract_dir": "Pharo",
-    "hash": "4oyQHWzDn8Oxf+KVmuKVqcK64pWQZEcX4pWpD8+Dw7kcw4duS8+E4pWeF0Qeb8Kq",
+    "hash": "a91d6ce1a47fc8caa7cd644717ca0fe5971c806e4be7c617441e6fa665aec7dd",
     "homepage": "https://pharo.org",
     "license": "MIT",
-    "persist": [
-        "Pharo.image",
-        "Pharo.ini",
-        "Pharo.changes",
-        "images"
-    ],
-    "shortcuts": [
-        [
-            "Pharo.exe",
-            "Launch Pharo",
-            "Pharo.image"
-        ]
-    ],
+    "persist": ["Pharo.image", "Pharo.ini", "Pharo.changes", "images"],
+    "shortcuts": [["Pharo.exe", "Launch Pharo", "Pharo.image"]],
     "url": "https://files.pharo.org/pharo-launcher/3.0.1/pharo-launcher-3.0.1.msi",
     "version": "3.0.1"
 }
