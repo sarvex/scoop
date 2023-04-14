@@ -1,6 +1,6 @@
 {
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansTW.zip"
+        "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/$version/SourceHanSansTW.zip"
     },
     "checkver": {
         "github": "https://github.com/adobe-fonts/source-han-sans"
@@ -10,6 +10,6 @@
     "hash": "1eb1c2c92e0aa99fb2bc198481db412b3064f6cf758231a2ab217ad3a55b2a71",
     "homepage": "https://github.com/adobe-fonts/source-han-sans",
     "notes": "Please install fonts in $dir manually",
-    "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/$version/SourceHanSansTW.zip",
+    "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSansTW.zip",
     "version": "2.004R"
 }
