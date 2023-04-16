@@ -1,6 +1,6 @@
 {
   "autoupdate": {
-    "url": "https://github.com/adobe-fonts/source-han-serif/raw/release/SubsetOTF/SourceHanSerifCN.zip"
+    "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/$version/SourceHanSerifCN.zip"
   },
   "checkver": {
     "github": "https://github.com/adobe-fonts/source-han-serif"
@@ -11,6 +11,6 @@
   "homepage": "https://github.com/adobe-fonts/source-han-serif",
   "license": "http://scripts.sil.org/OFL",
   "notes": "Please install fonts in $dir manually",
-  "url": "https://github.com/adobe-fonts/source-han-serif/raw/release/SubsetOTF/SourceHanSerifCN.zip",
-  "version": "2.001"
+  "url": "https://github.com/adobe-fonts/source-han-sans/releases/download/2.004R/SourceHanSerifCN.zip",
+  "version": "2.004R"
 }
