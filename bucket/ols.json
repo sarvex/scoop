@@ -2,7 +2,7 @@
   "architecture": {
     "64bit": {
       "extract_dir": "ols_nightly_windows\\ols-nightly",
-      "hash": "9e28524d9a765d34f7c25bc10537b08c7ef5c5b1a1580c4efcd645b0994b4aec",
+      "hash": "3b7fc922ae5a43833592441d491deea650e43d6da465c9d1bfaa15ffb350f6ff",
       "url": "https://github.com/DanielGavin/ols/releases/download/nightly/ols-x86_64-pc-windows-msvc.exe"
     }
   },
