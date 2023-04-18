@@ -3,7 +3,6 @@
     "[powershell]": {
         "editor.formatOnSave": true
     },
-    "editor.renderFinalNewline": "off",
     "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
     "powershell.codeFormatting.preset": "OTBS",
     "powershell.codeFormatting.alignPropertyValuePairs": true,
@@ -24,16 +23,12 @@
     },
     "workbench.colorCustomizations": {
         "commandCenter.border": "#e7e7e799",
-        "editorGroup.border": "#27a9e6",
-        "panel.border": "#27a9e6",
-        "sash.hoverBorder": "#27a9e6",
-        "sideBar.border": "#27a9e6",
-        "tab.activeBorder": "#27a9e6",
-        "titleBar.activeBackground": "#178cc3",
+        "sash.hoverBorder": "#f67645",
+        "titleBar.activeBackground": "#f45214",
         "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.border": "#178cc3",
-        "titleBar.inactiveBackground": "#178cc399",
-        "titleBar.inactiveForeground": "#e7e7e799"
+        "titleBar.inactiveBackground": "#f4521499",
+        "titleBar.inactiveForeground": "#e7e7e799",
+        "tab.activeBorder": "#f67645"
     },
-    "peacock.color": "#178cc3"
+    "peacock.color": "#f45214"
 }
