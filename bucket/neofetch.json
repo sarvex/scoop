@@ -17,9 +17,7 @@
             "Set-Content \"$dir\\neofetch.ps1\" \"& `$(join-path `$(scoop prefix $git) 'bin\\bash.exe') `$(join-path `$psscriptroot 'neofetch') @args\" -Encoding ASCII"
         ]
     },
-    "bin": [
-        "neofetch.cmd"
-    ],
+    "bin": "neofetch.cmd",
     "checkver": "github",
     "autoupdate": {
         "url": "https://raw.githubusercontent.com/dylanaraps/neofetch/$version/neofetch"

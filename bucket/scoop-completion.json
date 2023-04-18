@@ -14,10 +14,6 @@
     "psmodule": {
         "name": "scoop-completion"
     },
-    "post_install": [
-        "scoop config alias @{}",
-        "Import-Module scoop-completion"
-    ],
     "post_install": "Import-Module $env:SCOOP\\modules\\scoop-completion",
     "checkver": {
         "url": "https://github.com/Moeologist/scoop-completion/tags",

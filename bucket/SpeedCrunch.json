@@ -17,7 +17,7 @@
         "history.json"
     ],
     "checkver": {
-        "url":"https://heldercorreia.bitbucket.io/speedcrunch/",
+        "url": "https://heldercorreia.bitbucket.io/speedcrunch/",
         "regex": "SpeedCrunch ([\\d.]+) documentation"
     },
     "autoupdate": {

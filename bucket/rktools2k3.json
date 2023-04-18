@@ -100,40 +100,40 @@
     ],
     "shortcuts": [
         [
-                "chklnks.exe",
-                "Resource Kit/Link Check Wizzard"
+            "chklnks.exe",
+            "Resource Kit/Link Check Wizzard"
         ],
         [
-                "gpmonitor.exe",
-                "Resource Kit/Group Policy Monitor"
+            "gpmonitor.exe",
+            "Resource Kit/Group Policy Monitor"
         ],
         [
-                "lockoutstatus.exe",
-                "Resource Kit/Accout Lockout Status"
+            "lockoutstatus.exe",
+            "Resource Kit/Accout Lockout Status"
         ],
         [
-                "lsview.exe",
-                "Resource Kit/License Server Viewer"
+            "lsview.exe",
+            "Resource Kit/License Server Viewer"
         ],
         [
-                "oleview.exe",
-                "Resource Kit/OLE~COM Object Viewer"
+            "oleview.exe",
+            "Resource Kit/OLE~COM Object Viewer"
         ],
         [
-                "rcontrolad.exe",
-                "Resource Kit/Active Drectory Remote Control"
+            "rcontrolad.exe",
+            "Resource Kit/Active Drectory Remote Control"
         ],
         [
-                "remapkey.exe",
-                "Resource Kit/RemapKey"
+            "remapkey.exe",
+            "Resource Kit/RemapKey"
         ],
         [
-                "showperf.exe",
-                "Resource Kit/Performance Data Block Dump Utility"
+            "showperf.exe",
+            "Resource Kit/Performance Data Block Dump Utility"
         ],
         [
-                "tcmon.exe",
-                "Resource Kit/Traffic Control"
+            "tcmon.exe",
+            "Resource Kit/Traffic Control"
         ],
         [
             "vfi.exe",
