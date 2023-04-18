@@ -29,7 +29,7 @@
     ],
     "checkver": "FastCopy ver ([\\d.]+)",
     "description": "The Fastest copy/backup software.",
-    "hash": "1192ff6459440840df651c2e4049a6db3fbafa0d6809637db3092a7c0f19ba33",
+    "hash": "f0f417e2e524bc3c1c72c1a2fcb0cdca847128490064856b376bfac42ca8b55e",
     "homepage": "https://fastcopy.jp",
     "license": {
         "identifier": "Freeware",
@@ -51,6 +51,6 @@
             "FastCopy Setup"
         ]
     ],
-    "url": "https://fastcopy.jp/archive/FastCopy5.0.2_installer.exe",
-    "version": "5.0.2"
+    "url": "https://fastcopy.jp/archive/FastCopy5.0.3_installer.exe",
+    "version": "5.0.3"
 }
