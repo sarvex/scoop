@@ -1,40 +1,45 @@
 {
-  "architecture": {
-    "32bit": {
-      "hash": "3198ba7a685c9cbd0457cb89abd9d81bed9f9642f2289a181eddd6c8a68f5cdd",
-      "url": "https://www.voidtools.com/Everything-1.4.1.1015.x86.zip"
-    },
-    "64bit": {
-      "hash": "656ff3946222048a5558160023da6fd8abc6fa9569f7ac1dff058410a3db6f28",
-      "url": "https://www.voidtools.com/Everything-1.4.1.1015.x64.zip"
-    }
-  },
-  "autoupdate": {
     "architecture": {
-      "32bit": {
-        "url": "https://www.voidtools.com/Everything-$version.x86.zip"
-      },
-      "64bit": {
-        "url": "https://www.voidtools.com/Everything-$version.x64.zip"
-      }
+        "32bit": {
+            "hash": "04661c7a2902e91878b8d714369cf5d7f7d52f79d4fb3fdfe8ce619641ab5793",
+            "url": "https://www.voidtools.com/Everything-1.4.1.1022.x86.zip"
+        },
+        "64bit": {
+            "hash": "c718bcd73d341e64c8cb47e97eb0c45d010fdcc45c2488d4a3a3c51acc775889",
+            "url": "https://www.voidtools.com/Everything-1.4.1.1022.x64.zip"
+        }
     },
-    "hash": {
-      "url": "$baseurl/Everything-$version.sha256"
-    }
-  },
-  "bin": "Everything.exe",
-  "checkver": "Download Everything ([\\d.]+)",
-  "description": "Locate files and folders by name instantly.",
-  "homepage": "https://www.voidtools.com",
-  "license": "MIT",
-  "pre_install": [
-    "ensure \"$persist_dir\" | Out-Null",
-    "if (!(Test-Path \"$persist_dir\\Everything.ini\")) { Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-install-config null') | Out-Null }",
-    "Get-ChildItem \"$persist_dir\\*\" -Include 'Everything.db', 'Bookmarks.csv', 'Everything.ini' | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue"
-  ],
-  "shortcuts": [["Everything.exe", "Everything"]],
-  "uninstaller": {
-    "script": "Get-ChildItem \"$dir\\*\" -Include 'Everything.ini', 'Everything.db', 'Bookmarks.csv' | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
-  },
-  "version": "1.4.1.1015"
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://www.voidtools.com/Everything-$version.x86.zip"
+            },
+            "64bit": {
+                "url": "https://www.voidtools.com/Everything-$version.x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/Everything-$version.sha256"
+        }
+    },
+    "bin": "Everything.exe",
+    "checkver": "Download Everything ([\\d.]+)",
+    "description": "Locate files and folders by name instantly.",
+    "homepage": "https://www.voidtools.com",
+    "license": "MIT",
+    "pre_install": [
+        "ensure \"$persist_dir\" | Out-Null",
+        "if (!(Test-Path \"$persist_dir\\Everything.ini\")) { Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-install-config null') | Out-Null }",
+        "Get-ChildItem \"$persist_dir\\*\" -Include 'Everything.db', 'Bookmarks.csv', 'Everything.ini' | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue"
+    ],
+    "shortcuts": [
+        [
+            "Everything.exe",
+            "Everything"
+        ]
+    ],
+    "uninstaller": {
+        "script": "Get-ChildItem \"$dir\\*\" -Include 'Everything.ini', 'Everything.db', 'Bookmarks.csv' | Copy-Item -Destination \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+    },
+    "version": "1.4.1.1022"
 }
