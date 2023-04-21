@@ -1,18 +1,33 @@
 {
-  "homepage": "https://www.snipaste.com/",
-  "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
-  "version": "2.8.3-Beta",
-  "license": "Proprietary",
   "architecture": {
-    "64bit": {
-      "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.8.3-Beta-x64.zip",
-      "hash": "sha1:039b8a31e0de0842764f6f2415025c1a48841334"
-    },
     "32bit": {
-      "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.8.3-Beta-x86.zip",
-      "hash": "sha1:b16cd4f44f8f1359fc89eb8569943b9ae34fa243"
+      "hash": "sha1:b16cd4f44f8f1359fc89eb8569943b9ae34fa243",
+      "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.8.3-Beta-x86.zip"
+    },
+    "64bit": {
+      "hash": "sha1:039b8a31e0de0842764f6f2415025c1a48841334",
+      "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-2.8.3-Beta-x64.zip"
     }
   },
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x86.zip"
+      },
+      "64bit": {
+        "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x64.zip"
+      }
+    },
+    "hash": {
+      "url": "https://dl.snipaste.com/sha-1.txt"
+    }
+  },
+  "checkver": {
+    "regex": "Snipaste-(([\\d.]+)-Beta[\\d]*?)-x64.zip",
+    "url": "https://bitbucket.org/liule/snipaste/downloads/"
+  },
+  "description": "A snipping tool, which allows you to pin the screenshot back onto the screen.",
+  "homepage": "https://www.snipaste.com/",
   "installer": {
     "script": [
       "function CreateFile([String] $file, [String] $content = $null) {",
@@ -22,6 +37,12 @@
       "}",
       "CreateFile 'config.ini'"
     ]
+  },
+  "license": "Proprietary",
+  "persist": ["history", "config.ini"],
+  "shortcuts": [["Snipaste.exe", "Snipaste"]],
+  "suggest": {
+    "vcredist": "extras/vcredist2015"
   },
   "uninstaller": {
     "script": [
@@ -34,26 +55,5 @@
       "BackupFile 'config.ini'"
     ]
   },
-  "shortcuts": [["Snipaste.exe", "Snipaste"]],
-  "persist": ["history", "config.ini"],
-  "suggest": {
-    "vcredist": "extras/vcredist2015"
-  },
-  "checkver": {
-    "url": "https://bitbucket.org/liule/snipaste/downloads/",
-    "regex": "Snipaste-(([\\d.]+)-Beta[\\d]*?)-x64.zip"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x64.zip"
-      },
-      "32bit": {
-        "url": "https://bitbucket.org/liule/snipaste/downloads/Snipaste-$version-x86.zip"
-      }
-    },
-    "hash": {
-      "url": "https://dl.snipaste.com/sha-1.txt"
-    }
-  }
+  "version": "2.8.3-Beta"
 }

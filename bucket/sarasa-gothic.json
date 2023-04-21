@@ -1,12 +1,12 @@
 {
-  "version": "0.40.5",
-  "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
-  "homepage": "https://github.com/be5invis/Sarasa-Gothic",
-  "license": "SIL Open Font License",
-  "notes": "You may need to restart the system to use recently installed fonts.",
+  "autoupdate": {
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z"
+  },
+  "checkver": "github",
   "depends": "sudo",
-  "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.40.5/sarasa-gothic-ttf-0.40.5.7z",
+  "description": "This is SARASA GOTHIC, a CJK programming font based on Iosevka and Source Han Sans.",
   "hash": "b532e59c522c8bb2f95bee18a74452d35ee1a1011906feba2effc30f5676e079",
+  "homepage": "https://github.com/be5invis/Sarasa-Gothic",
   "installer": {
     "script": [
       "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
@@ -16,6 +16,8 @@
       "}"
     ]
   },
+  "license": "SIL Open Font License",
+  "notes": "You may need to restart the system to use recently installed fonts.",
   "uninstaller": {
     "script": [
       "if(!(is_admin)) { error \"Admin rights are required, please run 'sudo scoop uninstall $app'\"; exit 1 }",
@@ -26,8 +28,6 @@
       "Write-Host \"The 'Sarasa Gothic' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
     ]
   },
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z"
-  }
+  "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.40.5/sarasa-gothic-ttf-0.40.5.7z",
+  "version": "0.40.5"
 }
