@@ -1,34 +1,34 @@
 // Configure PSScriptAnalyzer settings
 {
-    "[powershell]": {
-        "editor.formatOnSave": true
-    },
-    "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
-    "powershell.codeFormatting.preset": "OTBS",
-    "powershell.codeFormatting.alignPropertyValuePairs": true,
-    "powershell.codeFormatting.ignoreOneLineBlock": true,
-    "json.schemas": [
-        {
-            "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
-            "fileMatch": ["bucket/*.json"]
-        }
-    ],
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/tmp": true
-    },
-    "workbench.colorCustomizations": {
-        "commandCenter.border": "#e7e7e799",
-        "sash.hoverBorder": "#ea17ec",
-        "titleBar.activeBackground": "#bf10c0",
-        "titleBar.activeForeground": "#e7e7e7",
-        "titleBar.inactiveBackground": "#bf10c099",
-        "titleBar.inactiveForeground": "#e7e7e799",
-        "tab.activeBorder": "#ea17ec"
-    },
-    "peacock.color": "#bf10c0"
+  "[powershell]": {
+    "editor.formatOnSave": true
+  },
+  "powershell.scriptAnalysis.settingsPath": "PSScriptAnalyzerSettings.psd1",
+  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.codeFormatting.alignPropertyValuePairs": true,
+  "powershell.codeFormatting.ignoreOneLineBlock": true,
+  "json.schemas": [
+    {
+      "url": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+      "fileMatch": ["bucket/*.json"]
+    }
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/tmp": true
+  },
+  "workbench.colorCustomizations": {
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#ea17ec",
+    "titleBar.activeBackground": "#bf10c0",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#bf10c099",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "tab.activeBorder": "#ea17ec"
+  },
+  "peacock.color": "#bf10c0"
 }

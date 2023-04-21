@@ -8,10 +8,5 @@
     "script": "\"$dir\\WACUP_Preview_Portable_v1_0_21_7236.exe\" "
   },
   "bin": "winamp.exe",
-  "shortcuts": [
-    [
-        "winamp.exe",
-        "Winamp"
-    ]
-  ]
+  "shortcuts": [["winamp.exe", "Winamp"]]
 }

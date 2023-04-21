@@ -11,12 +11,7 @@
   "hash": "767e24a1b5e1cfeec12f8ea4e70b4fcf3a942a4a9adf0b41a0476fac073038be",
   "homepage": "https://web.archive.org/web/http://optimumx.com/",
   "license": "freeware",
-  "shortcuts": [
-    [
-      "AccountManager.exe",
-      "OptimumX Account Manager"
-    ]
-  ],
+  "shortcuts": [["AccountManager.exe", "OptimumX Account Manager"]],
   "url": "https://web.archive.org/web/http://optimumx.com/download/AccountManager.zip",
   "version": "2.10"
 }
