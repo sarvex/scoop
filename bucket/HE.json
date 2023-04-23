@@ -14,8 +14,8 @@
   "bin": "HE_Portable.exe",
   "shortcuts": [["HE_Portable.exe", "HE"]],
   "checkver": {
-    "url": "https://github.com/Faintsnow/HE/releases/latest",
-    "regex": "/Faintsnow/HE/releases/download/(?<date>\\d+)/HE_v([\\d.]+)_Portable.zip"
+    "url": "https://github.com/Faintsnow/HE",
+    "regex": "(?<date>\\d+)/HE_v([\\d.]+)_Portable.zip"
   },
   "autoupdate": {
     "url": "https://github.com/Faintsnow/HE/releases/download/$matchDate/HE_v$version_Portable.zip"

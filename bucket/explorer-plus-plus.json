@@ -20,7 +20,7 @@
     }
   },
   "bin": "Explorer++.exe",
-  "checkver": "<h5>Version ([\\d.]+) \\(stable\\)</h5>",
+  "checkver": "Version ([\\d.]+) \\(stable\\)",
   "homepage": "https://explorerplusplus.com",
   "license": "freeware",
   "persist": "config.xml",
