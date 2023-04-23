@@ -1,11 +1,11 @@
 {
     "homepage": "https://sunlogin.oray.com/",
     "description": "向日葵远程控制软件",
-    "version": "12.5.1.44969",
+    "version": "13.1.1.54688",
     "architecture": {
         "64bit": {
-            "url": "https://dl-cdn.oray.com/sunlogin/windows/SunloginClient_12.5.1.44969_x64.exe#/SunloginClient.exe",
-            "hash": "c2474c983b153fb9fd1bf39de03c24232b46dadfb24af39e9ab4e113f3c1b8d7",
+            "url": "https://dl-cdn.oray.com/sunlogin/windows/SunloginClient_13.1.1.54688_x64.exe#/SunloginClient.exe",
+            "hash": "96342f73c844f5d0d217497b3f3a003fba74b3c0c63e06d1331509bf55b9eaa3",
             "shortcuts": [
                 [
                     "SunloginClient.exe",
@@ -14,8 +14,8 @@
             ]
         },
         "32bit": {
-            "url": "https://dl-cdn.oray.com/sunlogin/windows/SunloginClient_12.5.1.44969.exe#/SunloginClient.exe",
-            "hash": "",
+            "url": "https://dl-cdn.oray.com/sunlogin/windows/SunloginClient_13.1.1.54688.exe#/SunloginClient.exe",
+            "hash": "5a9102c05ea56fe46e9c82d7e0ee375ac08a7dddaa0ccf35d1ce8756922ff174",
             "shortcuts": [
                 [
                     "SunloginClient.exe",
