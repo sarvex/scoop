@@ -1,32 +1,44 @@
 {
-  "version": "23.0.2",
-  "description": "Database tool for developers, SQL programmers, database administrators and analysts",
-  "homepage": "https://dbeaver.io",
-  "license": "Apache-2.0",
-  "suggest": {
-    "java": ["java/oraclejdk", "java/oraclejre8", "java/openjdk11"]
-  },
-  "architecture": {
-    "64bit": {
-      "url": "https://download.dbeaver.com/community/23.0.2/dbeaver-ce-23.0.2-win32.win32.x86_64.zip",
-      "hash": "86138a7bf9ae9e52acfb0db37d3137d9b7a2a2bb7f2ea912f5916355635534d9"
-    }
-  },
-  "extract_dir": "dbeaver",
-  "bin": ["dbeaver.exe", "dbeaver-cli.exe"],
-  "shortcuts": [["dbeaver.exe", "DBeaver"]],
-  "checkver": {
-    "url": "https://dbeaver.io/download/",
-    "regex": "DBeaver Community ([\\d.]+)"
-  },
-  "autoupdate": {
-    "architecture": {
-      "64bit": {
-        "url": "https://download.dbeaver.com/community/$version/dbeaver-ce-$version-win32.win32.x86_64.zip"
-      }
+    "version": "23.0.3",
+    "description": "Database tool for developers, SQL programmers, database administrators and analysts",
+    "homepage": "https://dbeaver.io",
+    "license": "Apache-2.0",
+    "suggest": {
+        "java": [
+            "java/oraclejdk",
+            "java/oraclejre8",
+            "java/openjdk11"
+        ]
     },
-    "hash": {
-      "url": "$baseurl/checksum/$basename.sha256"
+    "architecture": {
+        "64bit": {
+            "url": "https://download.dbeaver.com/community/23.0.3/dbeaver-ce-23.0.3-win32.win32.x86_64.zip",
+            "hash": "50fdc16f5ab735da779994fc932056fd84ca6e9a2859497fdb87755585f965bd"
+        }
+    },
+    "extract_dir": "dbeaver",
+    "bin": [
+        "dbeaver.exe",
+        "dbeaver-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "dbeaver.exe",
+            "DBeaver"
+        ]
+    ],
+    "checkver": {
+        "url": "https://dbeaver.io/download/",
+        "regex": "DBeaver Community ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.dbeaver.com/community/$version/dbeaver-ce-$version-win32.win32.x86_64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksum/$basename.sha256"
+        }
     }
-  }
 }
