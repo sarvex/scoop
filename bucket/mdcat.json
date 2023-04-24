@@ -1,30 +1,33 @@
 {
-  "homepage": "https://crates.io/crates/mdcat",
-  "description": "cat for Markdown",
-  "license": "Apache-2.0",
-  "version": "2.0.2",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/lunaryorn/mdcat/releases/download/mdcat-2.0.2/mdcat-2.0.2-x86_64-pc-windows-msvc.zip",
-      "hash": "36d53548ee00bbb1e7b6225e398fe5de0a4897c537a9571cf1d3113dfe5318f1"
-    }
-  },
-  "installer": {
-    "script": "Copy-Item \"$dir\\mdcat.exe\" \"$dir\\mdless.exe\""
-  },
-  "bin": ["mdcat.exe", "mdless.exe"],
-  "checkver": {
-    "url": "https://github.com/lunaryorn/mdcat/releases/latest",
-    "regex": "\\/releases\\/tag\\/mdcat-([\\d.]+)"
-  },
-  "autoupdate": {
+    "homepage": "https://crates.io/crates/mdcat",
+    "description": "cat for Markdown",
+    "license": "Apache-2.0",
+    "version": "2.0.3",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/lunaryorn/mdcat/releases/download/mdcat-$version/mdcat-$version-x86_64-pc-windows-msvc.zip"
-      }
+        "64bit": {
+            "url": "https://github.com/lunaryorn/mdcat/releases/download/mdcat-2.0.3/mdcat-2.0.3-x86_64-pc-windows-msvc.zip",
+            "hash": "c93b31c7b55fe6353059d52c75d84dc7d92546d273c539ed6b5507b5b05fa258"
+        }
     },
-    "hash": {
-      "url": "$baseurl/SHA512SUM.txt"
+    "installer": {
+        "script": "Copy-Item \"$dir\\mdcat.exe\" \"$dir\\mdless.exe\""
+    },
+    "bin": [
+        "mdcat.exe",
+        "mdless.exe"
+    ],
+    "checkver": {
+        "url": "https://github.com/lunaryorn/mdcat/releases/latest",
+        "regex": "\\/releases\\/tag\\/mdcat-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/lunaryorn/mdcat/releases/download/mdcat-$version/mdcat-$version-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA512SUM.txt"
+        }
     }
-  }
 }
