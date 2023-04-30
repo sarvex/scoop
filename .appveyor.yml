@@ -1,12 +1,12 @@
 skip_commits:
   files:
-    - '**/*.md'
-    - '.vscode/**/*'
+    - "**/*.md"
+    - ".vscode/**/*"
 cache:
   - '%USERPROFILE%\Documents\WindowsPowerShell\Modules -> .appveyor.yml'
 matrix:
   fast_finish: true
-build: 'off'
+build: "off"
 image: Visual Studio 2022
 environment:
   SCOOP: C:\projects\scoop
