@@ -12,13 +12,11 @@ jobs:
       id-token: write # This is required to allow the GitHub Action to authenticate with Deno Deploy.
       contents: read
     steps:
-    -
-      uses: actions/checkout@v3
-      with:
-        ref: api
-    -
-      name: Deploy to Deno Deploy
-      uses: denoland/deployctl@v1
-      with:
-        project: scoop # the name of the project on Deno Deploy
-        entrypoint: index.ts # the entrypoint to deploy
+      - uses: actions/checkout@v3
+        with:
+          ref: api
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: scoop # the name of the project on Deno Deploy
+          entrypoint: index.ts # the entrypoint to deploy
