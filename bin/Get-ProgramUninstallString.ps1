@@ -4,9 +4,9 @@
     1.0
 .Guid
     cb90dc28-8ba0-425f-9176-835540937079
-.Author 
+.Author
     Thomas J. Malkewitz @dotps1
-.Tags 
+.Tags
     Guid, Uninstall, Registry
 .ProjectUri
     https://github.com/dotps1/PSFunctions
@@ -36,7 +36,7 @@
     Returns software products with empty uninstall values.
 .Example
     PS C:\> Get-ProgramUninstallString -Name "Google Chrome"
-    
+
     Name          Version       Guid                                   UninstallString
     ----          -------       ----                                   ---------------
     Google Chrome 57.0.2987.110 {4F711ED6-6E14-3607-A3CA-E3282AFE87B6} MsiExec.exe /X{4F711ED6-6E14-3607-A3CA-E3282AFE87B6}
@@ -60,79 +60,79 @@
 
 
 [CmdletBinding(
-    DefaultParameterSetName = "ByName"
+  DefaultParameterSetName = "ByName"
 )]
 [OutputType(
-    [PSCustomObject]
+  [PSCustomObject]
 )]
 
 param (
-    [Parameter(
-        ParameterSetName = "ByName",
-        ValueFromPipeline = $true,
-        ValueFromPipelineByPropertyName = $true
-    )]
-    [Alias(
-        "DisplayName"
-    )]
-    [String[]]
-    $Name,
+  [Parameter(
+    ParameterSetName = "ByName",
+    ValueFromPipeline = $true,
+    ValueFromPipelineByPropertyName = $true
+  )]
+  [Alias(
+    "DisplayName"
+  )]
+  [String[]]
+  $Name,
 
-    [Parameter(
-        ParameterSetName = "ByFilter"
-    )]
-    [String]
-    $Filter = "*",
+  [Parameter(
+    ParameterSetName = "ByFilter"
+  )]
+  [String]
+  $Filter = "*",
 
-    [Parameter()]
-    [Switch]
-    $ShowNulls
+  [Parameter()]
+  [Switch]
+  $ShowNulls
 )
 
 begin {
-    try {
-        if (Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node") {
-            $programs = Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
-        }
-        $programs += Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
-        $programs += Get-ItemProperty -Path "Registry::\HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction SilentlyContinue
-    } catch {
-        Write-Error $_
-        break
+  try {
+    if (Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node") {
+      $programs = Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
     }
+    $programs += Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
+    $programs += Get-ItemProperty -Path "Registry::\HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction SilentlyContinue
+  } catch {
+    Write-Error $_
+    break
+  }
 }
 
 process {
-    if ($PSCmdlet.ParameterSetName -eq "ByName") {
-        foreach ($nameValue in $Name) {
-            $programs = $programs.Where({ 
-                $_.DisplayName -eq $nameValue
-            })
-        }
-    } else {
-        $programs = $programs.Where({ 
-            $_.DisplayName -like "*$Filter*" 
+  if ($PSCmdlet.ParameterSetName -eq "ByName") {
+    foreach ($nameValue in $Name) {
+      $programs = $programs.Where({
+          $_.DisplayName -eq $nameValue
+        })
+    }
+  } else {
+    $programs = $programs.Where({
+        $_.DisplayName -like "*$Filter*"
+      })
+  }
+
+  if ($null -ne $programs) {
+    if (-not ($ShowNulls.IsPresent)) {
+      $programs = $programs.Where({
+          -not [String]::IsNullOrEmpty(
+            $_.UninstallString
+          )
         })
     }
 
-    if ($null -ne $programs) {
-        if (-not ($ShowNulls.IsPresent)) {
-            $programs = $programs.Where({
-                -not [String]::IsNullOrEmpty(
-                    $_.UninstallString
-                )
-            })
+    $output = $programs.ForEach({
+        [PSCustomObject]@{
+          Name            = $_.DisplayName
+          Version         = $_.DisplayVersion
+          Guid            = $_.PSChildName
+          UninstallString = $_.UninstallString
         }
+      })
 
-        $output = $programs.ForEach({
-            [PSCustomObject]@{
-                Name = $_.DisplayName
-                Version = $_.DisplayVersion
-                Guid = $_.PSChildName
-                UninstallString = $_.UninstallString
-            }
-        })
-
-        Write-Output -InputObject $output
-    }
+    Write-Output -InputObject $output
+  }
 }

@@ -9,11 +9,11 @@ $Dir = Resolve-Path $Dir
 $files = (Get-ChildItem $Dir '*.json')
 
 foreach ($file in $files) {
-    $content = Get-Manifest $file.FullName
-    $newfile = "$Dir\$($file.BaseName).yml"
+  $content = Get-Manifest $file.FullName
+  $newfile = "$Dir\$($file.BaseName).yml"
 
-    # Move to keep history
-    git mv $file.Fullname $newfile
+  # Move to keep history
+  git mv $file.Fullname $newfile
 
-    Set-Manifet $newfile $content
+  Set-Manifet $newfile $content
 }
