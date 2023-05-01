@@ -1,33 +1,38 @@
 {
-  "architecture": {
-    "32bit": {
-      "hash": "64b57bd01d6f00b666c2e82caa97b41a3680107cb6b58077499233671b1b975a",
-      "installer": {
-        "script": "Rename-Item \"$dir\\bigjpg-win-x32.exe\" \"$dir\\bigjpg.exe\""
-      },
-      "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x32.zip"
-    },
-    "64bit": {
-      "hash": "9bfc7f891fb67fba54fe84a52577b1f07a316313dff3625c1a81a960cd3e0eee",
-      "installer": {
-        "script": "Rename-Item \"$dir\\bigjpg-win-x64.exe\" \"$dir\\bigjpg.exe\""
-      },
-      "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x64.zip"
-    }
-  },
-  "autoupdate": {
     "architecture": {
-      "32bit": {
-        "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x32.zip"
-      },
-      "64bit": {
-        "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x64.zip"
-      }
-    }
-  },
-  "bin": "bigjpg.exe",
-  "homepage": "https://bigjpg.com/",
-  "license": "Unknown",
-  "shortcuts": [["bigjpg.exe", "Bigjpg"]],
-  "version": "1.6.1"
+        "32bit": {
+            "hash": "64b57bd01d6f00b666c2e82caa97b41a3680107cb6b58077499233671b1b975a",
+            "installer": {
+                "script": "Rename-Item \"$dir\\bigjpg-win-x32.exe\" \"$dir\\bigjpg.exe\""
+            },
+            "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x32.zip"
+        },
+        "64bit": {
+            "hash": "9bfc7f891fb67fba54fe84a52577b1f07a316313dff3625c1a81a960cd3e0eee",
+            "installer": {
+                "script": "Rename-Item \"$dir\\bigjpg-win-x64.exe\" \"$dir\\bigjpg.exe\""
+            },
+            "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x64.zip"
+        }
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x32.zip"
+            },
+            "64bit": {
+                "url": "https://bigjpg-server.oss-cn-shenzhen.aliyuncs.com/app/bigjpg-win-x64.zip"
+            }
+        }
+    },
+    "bin": "bigjpg.exe",
+    "homepage": "https://bigjpg.com/",
+    "license": "Unknown",
+    "shortcuts": [
+        [
+            "bigjpg.exe",
+            "Bigjpg"
+        ]
+    ],
+    "version": "1.6.1"
 }

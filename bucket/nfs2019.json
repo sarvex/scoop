@@ -76,7 +76,5 @@
             "Microchip Filter Solutions 2019"
         ]
     ],
-    "persist": [
-        "data"
-    ]
+    "persist": "data"
 }

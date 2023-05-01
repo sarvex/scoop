@@ -10,7 +10,10 @@
     "suggest": {
         "vcredist": "extras/vcredist2022"
     },
-    "depends": ["cvp/nushell", "cvp/clink"],
+    "depends": [
+        "cvp/nushell",
+        "cvp/clink"
+    ],
     "architecture": {
         "64bit": {
             "url": "https://github.com/starship/starship/releases/download/v1.14.2/starship-x86_64-pc-windows-msvc.zip",

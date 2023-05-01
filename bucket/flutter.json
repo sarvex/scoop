@@ -3,9 +3,7 @@
     "description": "Google's SDK for crafting beautiful, fast user experiences for mobile, web, and desktop",
     "homepage": "https://flutter.dev",
     "license": "BSD-3-Clause",
-    "notes": [
-        " - Run 'flutter doctor' to see if there are any platform dependencies you need to complete the setup."
-    ],
+    "notes": " - Run 'flutter doctor' to see if there are any platform dependencies you need to complete the setup.",
     "suggest": {
         "Android SDK Tools": "nuke/android-clt",
         "Android Studio": "extras/android-studio",
