@@ -60,7 +60,7 @@
 
 
 [CmdletBinding(
-  DefaultParameterSetName = "ByName"
+  DefaultParameterSetName = 'ByName'
 )]
 [OutputType(
   [PSCustomObject]
@@ -68,21 +68,21 @@
 
 param (
   [Parameter(
-    ParameterSetName = "ByName",
+    ParameterSetName = 'ByName',
     ValueFromPipeline = $true,
     ValueFromPipelineByPropertyName = $true
   )]
   [Alias(
-    "DisplayName"
+    'DisplayName'
   )]
   [String[]]
   $Name,
 
   [Parameter(
-    ParameterSetName = "ByFilter"
+    ParameterSetName = 'ByFilter'
   )]
   [String]
-  $Filter = "*",
+  $Filter = '*',
 
   [Parameter()]
   [Switch]
@@ -91,11 +91,11 @@ param (
 
 begin {
   try {
-    if (Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node") {
-      $programs = Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
+    if (Test-Path -Path 'HKLM:\SOFTWARE\WOW6432Node') {
+      $programs = Get-ItemProperty -Path 'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction Stop
     }
-    $programs += Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction Stop
-    $programs += Get-ItemProperty -Path "Registry::\HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*" -ErrorAction SilentlyContinue
+    $programs += Get-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction Stop
+    $programs += Get-ItemProperty -Path 'Registry::\HKEY_USERS\*\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*' -ErrorAction SilentlyContinue
   } catch {
     Write-Error $_
     break
@@ -103,7 +103,7 @@ begin {
 }
 
 process {
-  if ($PSCmdlet.ParameterSetName -eq "ByName") {
+  if ($PSCmdlet.ParameterSetName -eq 'ByName') {
     foreach ($nameValue in $Name) {
       $programs = $programs.Where({
           $_.DisplayName -eq $nameValue
