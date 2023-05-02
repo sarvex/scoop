@@ -1,0 +1,19 @@
+{
+	"autoupdate": {
+		"url": "https://github.com/SayCV/gh-cdn-cvp/releases/download/v1.0.1/openorcadparser-cli-x64-v$version.7z"
+	},
+	"bin": [["OpenOrCadParser-cli.exe", "openorcadparser-cli"]],
+	"checkver": {
+		"jsonpath": "assets.browser_download_url",
+		"regex": "openorcadparser-cli-x64-v([\\d.]+)\\.7z",
+		"url": "https://api.github.com/repos/SayCV/gh-cdn-cvp/releases/tags/v1.0.1"
+	},
+	"depends": "vcredist2022",
+	"description": "OpenOrCadParser - FOSS Parser for Cadence OrCAD designs.",
+	"extract_dir": "",
+	"hash": "b813912cbc5eae81257850d8e6a93ad77e9a2000b0a82e3c407a082aec193444",
+	"homepage": "https://github.com/Werni2A/OpenOrCadParser",
+	"license": "MIT",
+	"url": "https://github.com/SayCV/gh-cdn-cvp/releases/download/v1.0.1/openorcadparser-cli-x64-v2023.04.14.7z",
+	"version": "2023.04.14"
+}
