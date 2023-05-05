@@ -19,7 +19,7 @@
             ]
         }
     },
-    "description": "一款采用并行计算，充分利用多核CPU性能，快速计算文件哈希值的工具",
+    "description": "一款采用并行计算, 充分利用多核CPU性能, 快速计算文件哈希值的工具",
     "hash": "77F8C17B281CC693DBAD871A246867DFA1B0E4C56A1EACAD1D9E7DF72A92AA9B",
     "homepage": "https://github.com/dragonyee/MyHash",
     "license": "Unknown",

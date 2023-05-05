@@ -8,8 +8,8 @@
     },
     "notes": [
         "修改: (By 423Down.com)",
-        "- 逆向修改实现便携化，数据强制保存到根目录 CloudMusicNetease",
-        "- 切断强制升级，无视选项升级开关，禁后续检测升级提示下载安装包"
+        "- 逆向修改实现便携化, 数据强制保存到根目录 CloudMusicNetease",
+        "- 切断强制升级, 无视选项升级开关, 禁后续检测升级提示下载安装包"
     ],
     "url": [
         "https://pan.jiemi.workers.dev/?file=/scoop/Music/CloudMusic_v2.9.6.199543.7z",

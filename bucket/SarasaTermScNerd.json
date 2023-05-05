@@ -1,6 +1,6 @@
 {
     "version": "1.1.0",
-    "description": "简体中文终端更纱黑体+Nerd图标字体库。中英文宽度完美2:1，图标长宽经过调整，不会出现对齐问题，尤其适合作为终端字体。",
+    "description": "简体中文终端更纱黑体+Nerd图标字体库。中英文宽度完美2:1, 图标长宽经过调整, 不会出现对齐问题, 尤其适合作为终端字体。",
     "homepage": "https://github.com/laishulu/Sarasa-Term-SC-Nerd",
     "license": "OFL-1.1",
     "depends": "",

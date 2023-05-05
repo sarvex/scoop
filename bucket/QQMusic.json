@@ -8,11 +8,11 @@
     },
     "notes": [
         "特点描述",
-        "反汇编处理，去我的音乐页面右侧广告及歌单页面右侧广告",
-        "去组件检测上报行为，删除 QQMusicUp.exe, QQMusicExternal.exe",
-        "禁止检测升级，去后续提示版本过低无法使用限制，去菜单检测更新",
+        "反汇编处理, 去我的音乐页面右侧广告及歌单页面右侧广告",
+        "去组件检测上报行为, 删除 QQMusicUp.exe, QQMusicExternal.exe",
+        "禁止检测升级, 去后续提示版本过低无法使用限制, 去菜单检测更新",
         "禁止在系统后台 %AppData%\\Tencent 里生成产品日志 logs 文件夹",
-        "删除无用的辅助程序，电脑管家下载、在线升级程序(已脱离)等文件"
+        "删除无用的辅助程序, 电脑管家下载、在线升级程序(已脱离)等文件"
     ],
     "url": [
         "https://pan.jiemi.workers.dev/?file=/scoop/Music/QQMusic_v18.44_NoAD_Portable.7z",
