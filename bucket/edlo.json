@@ -1,10 +1,7 @@
 {
-    "version": "0.01",
-    "description": "The ideal programming font",
-    "license": "OFL-1.1",
-    "homepage": "https://github.com/ehamiter/Edlo",
-    "url": "https://github.com/ehamiter/Edlo/raw/master/edlo.ttf",
-    "hash": "a35ab0dc62139a3e294ca3f7888586352f930a0ecbc861a2489bf62012e34fb7",
+	"description": "The ideal programming font",
+	"hash": "a35ab0dc62139a3e294ca3f7888586352f930a0ecbc861a2489bf62012e34fb7",
+	"homepage": "https://github.com/ehamiter/Edlo",
 	"installer": {
 		"script": [
 			"$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -37,6 +34,7 @@
 			"    Copy-Item $_.FullName -Destination $fontInstallDir", "}"
 		]
 	},
+	"license": "OFL-1.1",
 	"pre_uninstall": [
 		"$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
 		"Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
@@ -72,5 +70,7 @@
 			"    Write-Host \"The '$app' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
 			"}"
 		]
-	}
+	},
+	"url": "https://github.com/ehamiter/Edlo/raw/master/edlo.ttf",
+	"version": "0.01"
 }
