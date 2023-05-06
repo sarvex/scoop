@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "20170904",
+    "description": "Free CJK serif font including over 80,000 Unicode characters.",
+    "homepage": "https://osdn.net/projects/hanazono-font/",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://osdn.dl.osdn.jp/hanazono-font/68253/hanazono-20170904.zip",
+    "hash": "571cd4a09ae7da0c642d640fc2442c050aa450ebb0587a95cdd097d41a9c9572",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +81,16 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'HanaMin' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": {
+        "url": "https://osdn.net/projects/hanazono-font/",
+        "regex": "(?s)hanazono-font/releases/(?<tag>[\\d]+)\\\">hanazono-font.*?\\(([\\d]{4})-([\\d]{2})-([\\d]{2})\\)</a>",
+        "replace": "${1}${2}${3}"
+    },
+    "autoupdate": {
+        "url": "http://osdn.dl.osdn.jp/hanazono-font/$matchTag/hanazono-$version.zip"
     }
 }

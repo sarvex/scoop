@@ -1,9 +1,11 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "2111.01",
+    "description": "A fun, new monospaced font that includes programming ligatures and is designed to enhance the modern look and feel of the Windows Terminal.",
+    "homepage": "https://github.com/microsoft/cascadia-code",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/microsoft/cascadia-code/releases/download/v2111.01/CascadiaCode-2111.01.zip",
+    "hash": "51fd68176dffb87e2fbc79381aef7f5c9488b58918dee223cd7439b5aa14e712",
+    "extract_dir": "ttf",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +82,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The '$app' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/microsoft/cascadia-code/releases/download/v$version/CascadiaCode-$version.zip"
     }
 }

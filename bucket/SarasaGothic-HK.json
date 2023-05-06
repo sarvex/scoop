@@ -1,9 +1,14 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "##": "Renaming .7z to .7z_ so that the archive will not be automatically extracted by Scoop.",
+    "version": "0.40.6",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.40.6/sarasa-gothic-ttf-0.40.6.7z#/dl.7z_",
+    "hash": "8f30edba2bc2e333b0d60bfc717ddcdb880e9c1ff4926834ef4b488f293dc4df",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\dl.7z_\" \"$dir\" -Switches '*-hk-*.ttf' | Out-Null",
+        "Remove-Item \"$dir\\dl.7z_\""
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +85,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The 'Sarasa-Gothic' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z#/dl.7z_"
     }
 }

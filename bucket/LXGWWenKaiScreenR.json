@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "1.300",
+    "description": "LXGW WenKai for Screen Reading.",
+    "homepage": "https://github.com/lxgw/LxgwWenKai-Screen",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v1.300/LXGWWenKaiScreenR.ttf",
+    "hash": "f857a1170fb4dab9c630612de28071118d1250cdcdaed8d940a6d04ce87c79f3",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +81,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'LXGWWenKaiScreenR' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/lxgw/LxgwWenKai-Screen/releases/download/v$version/LXGWWenKaiScreenR.ttf"
     }
 }

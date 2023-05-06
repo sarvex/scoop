@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "2.0",
+    "description": "CJK (Chinese-Japanese-Korean) sans-serif font with round curves. The name 'huninn' means boba(tapioca balls).",
+    "homepage": "https://github.com/justfont/open-huninn-font",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/justfont/open-huninn-font/releases/download/v2.0/jf-openhuninn-2.0.ttf",
+    "hash": "eec8b0b68c34b9166ae37bed839b6126116b225d97f21a5954bb542b9fd1e68c",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +81,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'jf-openhuninn' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/justfont/open-huninn-font/releases/download/v$version/jf-openhuninn-$version.ttf"
     }
 }

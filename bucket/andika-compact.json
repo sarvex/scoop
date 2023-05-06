@@ -1,9 +1,14 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "5.000",
+    "description": "A sans-serif font family designed and optimized especially for literacy use (compact variant)",
+    "homepage": "https://software.sil.org/andika/",
+    "license": "SIL OFL 1.1",
+    "url": "https://software.sil.org/downloads/r/andika/AndikaCompact-5.000.zip",
+    "hash": "047d7abc6a12abf83fe0e62177e835434392c3c6d79e46433bc610fda05e0331",
+    "pre_install": [
+        "Move-Item $dir\\AndikaCompact-$version\\* $dir",
+        "Remove-Item $dir\\AndikaCompact-$version"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,7 +85,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The '$app' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     }

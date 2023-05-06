@@ -1,9 +1,10 @@
 {
     "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "description": "Sans-serif typeface family. The name 'Lato' means summer in Polish.",
+    "homepage": "https://www.latofonts.com/",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://www.latofonts.com/download/lato2ofl-zip#/fonts.zip",
+    "extract_dir": "Lato2OFL",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,7 +81,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The 'Lato' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     }

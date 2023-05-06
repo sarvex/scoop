@@ -1,9 +1,11 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "2.6",
+    "description": "+Jakarta Sans is a open-source fonts. Designed for Jakarta \"City of collaboration\" program in 2020.",
+    "homepage": "https://github.com/tokotype/PlusJakartaSans",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/tokotype/PlusJakartaSans/releases/download/2.6/PlusJakartaSans-2.6.zip",
+    "hash": "f1d21a6c99a5e7744574162dafc56e5c0895507fd9250ae04acbb1027733bee3",
+    "extract_dir": "PlusJakartaSans-2.6/static",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +82,13 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'Plus Jakarta Sans' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/tokotype/PlusJakartaSans/releases/download/$version/PlusJakartaSans-$version.zip",
+        "extract_dir": "PlusJakartaSans-$version/static"
     }
 }

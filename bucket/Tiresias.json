@@ -1,9 +1,17 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "0.1",
+    "description": "Typeface designed for people with weak vision. Developed by The Royal National Institute for the Blind (RNIB).",
+    "homepage": "https://en.wikipedia.org/wiki/Tiresias_(typeface)",
+    "license": "GPL-3.0-or-later",
+    "url": "http://deb.debian.org/debian/pool/main/f/fonts-tiresias/fonts-tiresias_0.1.orig.tar.gz",
+    "hash": "19D197EFDA2734C583505F78A6A16FC2CB3A2B45485F4808E427C0FA891C98E3",
+    "extract_dir": "ttf-tiresias-0.1",
+    "pre_install": [
+        "Get-ChildItem $dir -Filter '*.zip' | ForEach-Object {",
+        "    Expand-Archive $_.FullName $dir -Force",
+        "    Remove-Item $_.FullName",
+        "}"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,7 +88,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'Tiresias' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     }

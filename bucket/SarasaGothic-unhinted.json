@@ -1,9 +1,16 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "0.40.6",
+    "description": "Sarasa Gothic, a CJK (Chinese-Japanese-Korean) programming font based on Iosevka and Source Han Sans. (unhinted TTF version)",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "notes": [
+        "You are installing the unhinted TTF version of Sarasa Gothic.",
+        "The TTF version has the best compatibility, but takes a large disk space (about 6 GB)",
+        "For saving disk space, we recommend installing the unhinted TTC version (takes about 600 MB, requires Win10 or above)",
+        "To install it, run: scoop install SarasaGothic-ttc-unhinted"
+    ],
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.40.6/sarasa-gothic-ttf-unhinted-0.40.6.7z",
+    "hash": "1612062943d480d5442d5414d975354e04cea213c6ff04c14dd07379976e09a3",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -75,13 +82,17 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.ttc' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The 'Sarasa-Gothic' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-unhinted-$version.7z"
     }
 }

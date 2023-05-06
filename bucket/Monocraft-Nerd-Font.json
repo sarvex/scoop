@@ -1,9 +1,10 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "2.5",
+    "description": "A monospaced programming font inspired by the Minecraft typeface. (Nerd Fonts patched version)",
+    "homepage": "https://idreesinc.com/monocraft.html",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": "https://github.com/IdreesInc/Monocraft/releases/download/v2.5/Monocraft-nerd-fonts-patched.ttf",
+    "hash": "431329f14c1c4635b248d1d6a0d797dac5fdb5e678fad0858fe0c6e356b3b17c",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +81,14 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The '$app' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": {
+        "github": "https://github.com/IdreesInc/Monocraft"
+    },
+    "autoupdate": {
+        "url": "https://github.com/IdreesInc/Monocraft/releases/download/v$version/Monocraft-nerd-fonts-patched.ttf"
     }
 }

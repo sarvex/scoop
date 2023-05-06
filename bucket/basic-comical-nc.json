@@ -1,9 +1,9 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "1.00",
+    "homepage": "https://www.dafont.com/basic-comical-nc.font",
+    "license": "Unlicensed",
+    "url": "https://dl.dafont.com/dl/?f=basic_comical_nc#/basic-comical-nc.zip",
+    "hash": "ea01596811396ea7fe26c08daebfcb4b6abdea1551c654f8208b8061c898311f",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +80,15 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The '$app' font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": {
+        "url": "https://www.wfonts.com/font/basic-comical-nc",
+        "regex": "<p>Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://dl.dafont.com/dl/?f=basic_comical_nc#/basic-comical-nc.zip"
     }
 }

@@ -1,9 +1,18 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "1.300",
+    "description": "An open-source Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源中文字体。",
+    "homepage": "https://github.com/lxgw/LxgwWenKai",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": [
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/LXGWWenKaiMono-Bold.ttf",
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/LXGWWenKaiMono-Light.ttf",
+        "https://github.com/lxgw/LxgwWenKai/releases/download/v1.300/LXGWWenKaiMono-Regular.ttf"
+    ],
+    "hash": [
+        "0eab43557a2dd04cdc52ef88937daa4271e0738da8fff6de6d2f88a357abe1cc",
+        "8f4a53ccea16c53e54db6541e764f3366f303cd543edd7c4707625538e5821a0",
+        "52f814cfe2e728cbe06d60b897ef6a61f8853b1f372a00b7a1996cc9a76ee743"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +89,16 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font family 'LXGWWenKaiMono' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Bold.ttf",
+            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Light.ttf",
+            "https://github.com/lxgw/LxgwWenKai/releases/download/v$version/LXGWWenKaiMono-Regular.ttf"
         ]
     }
 }

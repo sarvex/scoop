@@ -1,9 +1,13 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "20150529",
+    "description": "CJK font based on the Mplus font, but with more rounded shape. (extra round version)",
+    "homepage": "http://jikasei.me/font/rounded-mplus/about.html",
+    "license": {
+        "identifier": "Freeware",
+        "url": "http://jikasei.me/font/rounded-mplus/license.html"
+    },
+    "url": "https://ymu.dl.osdn.jp/users/8/8570/rounded-x-mplus-20150529.7z",
+    "hash": "22a20428d953ded808ddf391868d1c0c3d3aae933a299e947e5094df525faf31",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +84,12 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'Rounded-X M+' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": "https://osdn.jp/downloads/users/8/(?<tag>\\d+)/rounded-x-mplus-(\\d{8}).7z",
+    "autoupdate": {
+        "url": "https://ymu.dl.osdn.jp/users/8/$matchTag/rounded-x-mplus-$version.7z"
     }
 }

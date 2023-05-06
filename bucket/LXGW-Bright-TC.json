@@ -1,9 +1,24 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
+    "version": "5.300",
+    "description": "An open-source Traditional Chinese font. Combination of LXGW WenKai TC (霞鹜文楷 TC) and Ysabeau Office",
+    "homepage": "https://github.com/lxgw/LxgwBright",
     "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "url": [
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-Italic.otf",
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-Medium.otf",
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-MediumItalic.otf",
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-Regular.otf",
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-SemiLight.otf",
+        "https://raw.githubusercontent.com/lxgw/LxgwBright/v5.300/LXGWBrightTC/LXGWBrightTC-SemiLightItalic.otf"
+    ],
+    "hash": [
+        "1b6f181c6c5845033baf0a43222afefc5563131a156d36e6a43e15c6e918f6d0",
+        "10611ebb2326624c07f3b1db174ac18ab2fd9a7aa3521c33345f4db84be53de8",
+        "366d14c33afe6e621bca4c4bc564cf22445870a102ffe37d38bfe548c246a6a8",
+        "15ba151ec3f6e2409baca4b6678469583022860459b267e16033a42b4b4a6d77",
+        "f52e4b6c501a51ddfe7be05ef8a0968902bd2f00060cb61c4f9a2b93af904a51",
+        "bc131c3714bc2ae87a6d0461bb7c90ee908db8ef2e2a4682ddfb3e489209536e"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -36,7 +51,7 @@
             "}",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.otf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item $_.FullName -Destination $fontInstallDir",
@@ -45,7 +60,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter '*.otf' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -75,13 +90,24 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter '*.otf' | ForEach-Object {",
             "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font family 'LXGW Bright TC' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
+        ]
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-Italic.otf",
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-Medium.otf",
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-MediumItalic.otf",
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-Regular.otf",
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-SemiLight.otf",
+            "https://raw.githubusercontent.com/lxgw/LxgwBright/v$version/LXGWBrightTC/LXGWBrightTC-SemiLightItalic.otf"
         ]
     }
 }

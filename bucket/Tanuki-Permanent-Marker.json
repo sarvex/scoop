@@ -1,9 +1,13 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "1.22",
+    "description": "CJK font that imitates the strokes of permanent marker pen.",
+    "homepage": "http://tanukifont.com/tanuki-permanent-marker/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://tanukifont.com/fonts-user-policy/"
+    },
+    "url": "https://tanukifont.com/download/TanukiMagic_1_22.zip",
+    "hash": "67f9ef68b043c036dc8c64cc70c266b9547853978fcf209050a8221c91766e1f",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,8 +84,15 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font 'Tanuki Permanent Marker' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
+    },
+    "checkver": {
+        "regex": "TanukiMagic_([\\d]+)_([\\d]+).zip",
+        "replace": "${1}.${2}"
+    },
+    "autoupdate": {
+        "url": "https://tanukifont.com/download/TanukiMagic_$majorVersion_$minorVersion.zip"
     }
 }

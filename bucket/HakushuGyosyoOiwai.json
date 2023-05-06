@@ -1,9 +1,14 @@
 {
-    "version": "nightly",
-    "description": "Thai National Font",
-    "homepage": "https://fonts.google.com/specimen/Charm",
-    "license": "OFL-1.1",
-    "url": "https://fonts.google.com/download?family=Charm#/fonts.zip",
+    "version": "1.0",
+    "description": "Japanese ink brush Gyosyo(行書) font suitable for celebrations/banquets",
+    "homepage": "https://www.hakusyu.com/download_shiki_spring.htm",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.hakusyu.com/download_shiki_spring.htm"
+    },
+    "url": "https://www.hakusyu.com/font_win/shiki/spring/hkgyoiw.zip",
+    "hash": "d26ac7e70b232d92072b30b5082b751b2fe273ab9b2325d2f241d56e5ad1c7d7",
+    "extract_dir": "hkgyoiw",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -80,7 +85,7 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'Charm' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"The 'HakushuGyosyoOiwai' Font has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     }
