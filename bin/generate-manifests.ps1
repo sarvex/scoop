@@ -39,7 +39,7 @@ function Export-FontManifest {
   $fullName = "$Name-$Variant"
   $path = "$PSScriptRoot\..\bucket\$fullName.json"
 
-  $filter = "'*.ttf'"
+  $filter = "'*NerdFont*'"
   if ($Variant -eq 'NF-Var') {
     $filter = "'*NerdFont-*'"
   } elseif ($Variant -eq 'NF-Mono') {
@@ -149,7 +149,7 @@ function Export-FontManifest {
   }
 
   # Use scoop's checkver script to autoupdate the manifest
-  & $PSScriptRoot\checkver.ps1 $fullName -u
+  & $PSScriptRoot\Check-Version.ps1 $fullName -u
 
   # Sleep to avoid 429 errors from github's REST API
   Start-Sleep 1
