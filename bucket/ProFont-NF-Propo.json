@@ -1,11 +1,10 @@
 {
-    "version": "6.3",
-    "description": "An open source monospace font with round corner and ligatures for IDE and command line. (Simplified Chinese with Nerd Fonts patched)",
-    "homepage": "https://github.com/subframe7536/Maple-font",
-    "license": "OFL-1.1",
-    "url": "https://github.com/subframe7536/Maple-font/releases/download/v6.3/MapleMono-SC-NF.zip",
-    "hash": "dbaa1d9263258c4c2cb51cb00d827b0ecb79a5f397aed41372b145c5b4701dc0",
-    "extract_dir": "SC-NF",
+    "version": "3.0.0",
+    "description": "Nerd Fonts patched 'ProFont' Font family. (Proportional version, for GUI usecases)",
+    "homepage": "https://github.com/ryanoasis/nerd-fonts",
+    "license": "MIT",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.0/ProFont.zip",
+    "hash": "6c407fede4ebfb29b0913ab1a1b8e7e6ca5e57bea2222c9c2f65fc7c61df9445",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -27,6 +26,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "if (-not $global) {",
             "    # Ensure user font install directory exists and has correct permission settings",
+            "    # See https://github.com/matthewjberger/scoop-nerd-fonts/issues/198#issuecomment-1488996737",
             "    New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
             "    $accessControlList = Get-Acl $fontInstallDir",
             "    $allApplicationPackagesAccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule([System.Security.Principal.SecurityIdentifier]::new(\"S-1-15-2-1\"), \"ReadAndExecute\", \"ContainerInherit,ObjectInherit\", \"None\", \"Allow\")",
@@ -37,7 +37,7 @@
             "}",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -Filter 'NerdFontPropo-*' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
             "    Copy-Item $_.FullName -Destination $fontInstallDir",
@@ -46,7 +46,7 @@
     },
     "pre_uninstall": [
         "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
-        "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
+        "Get-ChildItem $dir -Filter 'NerdFontPropo-*' | ForEach-Object {",
         "    Get-ChildItem $fontInstallDir -Filter $_.Name | ForEach-Object {",
         "        try {",
         "            Rename-Item $_.FullName $_.FullName -ErrorVariable LockError -ErrorAction Stop",
@@ -76,8 +76,8 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
-            "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (OpenType)') -Force -ErrorAction SilentlyContinue",
+            "Get-ChildItem $dir -Filter 'NerdFontPropo-*' | ForEach-Object {",
+            "    Remove-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
@@ -87,6 +87,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/subframe7536/Maple-font/releases/download/v$version/MapleMono-SC-NF.zip"
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/ProFont.zip"
     }
 }
