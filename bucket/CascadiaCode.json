@@ -41,7 +41,7 @@
 		]
 	},
 	"license": "OFL-1.1",
-	"pre_install": "Get-ChildItem $dir static -Recurse | Remove-Item",
+	"pre_install": "Get-ChildItem $dir static -Recurse | Remove-Item -Force",
 	"pre_uninstall": [
 		"$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
 		"Get-ChildItem $dir -Filter '*.ttf' | ForEach-Object {",
