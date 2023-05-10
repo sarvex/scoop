@@ -10,10 +10,9 @@
     "autoupdate": {
         "url": "https://github.com/microsoft/cascadia-code/releases/download/v$version/CascadiaCode-$version.zip"
     },
-    "pre_install": {
-        "script": [
+    "pre_install": [
           "Get-ChildItem $dir static -Recurse | Remove-Item -Recurse",
-          "Get-ChildItem $dir -Exclude ttf | Remove-Item -Recurse"]},
+          "Get-ChildItem $dir -Exclude ttf | Remove-Item -Recurse"],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
