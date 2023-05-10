@@ -1,10 +1,10 @@
 {
-    "version": "2.8.1",
+    "version": "2.8.2",
     "description": "Wrapper for various graphics API, incl. Glide and DirectDraw.",
     "homepage": "http://dege.freeweb.hu/dgVoodoo2/",
     "license": "Freeware",
-    "url": "http://dege.freeweb.hu/dgVoodoo2/bin/dgVoodoo2_8_1.zip",
-    "hash": "15f95a5c163f74105a03479fb2e868c04c432680e0892bf559198a93a7cd1c25",
+    "url": "http://dege.freeweb.hu/dgVoodoo2/bin/dgVoodoo2_8_2.zip",
+    "hash": "7b631f85d1f64c7bb127cd69f44dd5920e884f40b824cf9ba576f42770582ba5",
     "bin": [
         [
             "dgVoodooCpl.exe",
