@@ -1,5 +1,5 @@
 {
-    "version": "9.9",
+    "version": "10.0",
     "description": "A powerful, lightweight, yet full-featured screen capture tool",
     "homepage": "https://www.faststone.org/FSCaptureDetail.htm",
     "notes": [
@@ -9,8 +9,8 @@
         "astray.cn: OPRMM-IMDIA-RBJNH-ESLGU",
         "c1ikm: AXMQX-RMMMJ-DBHHF-WIHTV | AXOQS-RRMGS-ODAQO-APHUU"
     ],
-    "url": "https://www.faststonesoft.net/DN/FSCapture99.zip",
-    "hash": "c3452b1034fd1a5bf8f01b771692ef58c533db69c4efaffd1be4e2431c3eac67",
+    "url": "https://www.faststonesoft.net/DN/FSCapture100.zip",
+    "hash": "6e29036dfce6c7ae4243648dda4d0bd07eef163eef76a77c5b28e06f257b648a",
     "extract_dir": "FSCapture94",
     "bin": "FSCapture.exe",
     "shortcuts": [
