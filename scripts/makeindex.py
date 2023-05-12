@@ -23,6 +23,7 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+
 # ### imports ###
 
 from __future__ import (
@@ -449,10 +450,7 @@ OSIS = [
     "sWxWindows-exception-3.1",
 ]
 
-OSImap = {}
-for osi in OSIS:
-    OSImap[osi.lower()] = "https://spdx.org/licenses/%s" % osi
-
+OSImap = {osi.lower(): f"https://spdx.org/licenses/{osi}" for osi in OSIS}
 lmap = {
     "commercial": "https://en.m.wikipedia.org/wiki/Software_license#Proprietary_software_licenses",
     "freeware": "https://en.wikipedia.org/wiki/Freeware",
@@ -468,16 +466,13 @@ lmap = {
 def do_license(v):
     """doc me"""
     url = v
-    if "identifier" in v:
-        identifier = v["identifier"]
-    else:
-        identifier = ""
+    identifier = v["identifier"] if "identifier" in v else ""
     if "url" in v:
         url = v["url"]
     if re.search("^(http|ftp)", url):
         if not identifier:
             identifier = "Link"
-        v = '[%s](%s "%s")' % (identifier, url, url)
+        v = f'[{identifier}]({url} "{url}")'
         return v
 
     if not identifier:
@@ -494,21 +489,15 @@ def do_license(v):
             url = OSImap[k]
         elif lmap.get(k):
             url = lmap[k]
-        if url > "":
-            v += '[%s](%s "%s")' % (part, url, url)
-        else:
-            v += part
+        v += f'[{part}]({url} "{url}")' if url > "" else part
     return v
 
 
 def get_url(js):
     """doc me"""
-    if "checkver" in js:
-        if "url" in js["checkver"]:
-            return js["checkver"]["url"]
-    if "homepage" in js:
-        return js["homepage"]
-    return ""
+    if "checkver" in js and "url" in js["checkver"]:
+        return js["checkver"]["url"]
+    return js["homepage"] if "homepage" in js else ""
 
 
 def do_version(js):
@@ -516,10 +505,8 @@ def do_version(js):
     version = js["version"]
     url = get_url(js)
     if "checkver" not in js:
-        version = "%s ⚠" % version
-    if url == "":
-        return version
-    return '[%s](%s "%s")' % (version[0:21], url, url)
+        version = f"{version} ⚠"
+    return version if url == "" else f'[{version[:21]}]({url} "{url}")'
 
 
 # pylint: disable=R0912 # Too many branches (22/12) (too-many-branches)
@@ -527,7 +514,7 @@ def do_version(js):
 def main():
     """doc me"""
     markdown = "README.md"
-    print("Reading %s" % markdown)
+    print(f"Reading {markdown}")
     with io.open(markdown, "r", encoding="utf-8") as f:
         lines = f.readlines()
 
@@ -560,14 +547,8 @@ def main():
         if re.search("wip/", file):
             # print("skipping %s: wip" % file)
             continue
-        accept = False
-        print("file=%s" % file)
-        for spec in specs:
-            # print("spec=%s" % spec)
-            if fnmatch.fnmatch(file, spec):
-                accept = True
-                break
-
+        print(f"file={file}")
+        accept = any(fnmatch.fnmatch(file, spec) for spec in specs)
         if not accept:
             # print("skipping %s: not matched" % file)
             continue
@@ -589,7 +570,7 @@ def main():
                         val = val.strip()
                     if key == "license":
                         val = do_license(val)
-                    if key == "version":
+                    elif key == "version":
                         val = do_version(j)
                     row[key] = val
                 else:
@@ -605,12 +586,10 @@ def main():
 
     newlist = [(key, rows[key]) for key in sorted(rows.keys())]
 
-    for (name, row) in newlist:
-        table.append(
-            '|[%s](%s "%s")|%s|%s|%s|'
-            % (name, row["homepage"], row["homepage"], row["version"], row["description"], row["license"])
-        )
-
+    table.extend(
+        f'|[{name}]({row["homepage"]} "{row["homepage"]}")|{row["version"]}|{row["description"]}|{row["license"]}|'
+        for name, row in newlist
+    )
     out = []
 
     found = False
@@ -629,17 +608,17 @@ def main():
 
         out.append(line)
 
-    print("Writing %s" % markdown)
+    print(f"Writing {markdown}")
 
-    with io.open(markdown + ".tmp", "w", encoding="utf-8", newline="\n") as f:
+    with io.open(f"{markdown}.tmp", "w", encoding="utf-8", newline="\n") as f:
         data = "\n".join(out) + "\n"
         f.write(data)
 
-    if os.path.exists(markdown + ".bak"):
-        os.remove(markdown + ".bak")
+    if os.path.exists(f"{markdown}.bak"):
+        os.remove(f"{markdown}.bak")
 
-    os.rename(markdown, markdown + ".bak")
-    os.rename(markdown + ".tmp", markdown)
+    os.rename(markdown, f"{markdown}.bak")
+    os.rename(f"{markdown}.tmp", markdown)
 
 
 main()
