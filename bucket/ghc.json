@@ -1,0 +1,34 @@
+{
+    "version": "9.6.1",
+    "description": "An advanced, purely functional programming language.",
+    "homepage": "https://www.haskell.org",
+    "license": "BSD-3-Clause",
+    "notes": [
+        "Installed GHC from the official binary."
+    ],
+    "suggest": {
+        "Stack": "stack"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.haskell.org/~ghc/9.6.1/ghc-9.6.1-x86_64-unknown-mingw32.tar.xz",
+            "hash": "6121a889839d8b409f082169365bbfb6ed9e6a1f6ff0531d577ef7c2a9a417fb",
+            "extract_dir": "ghc-9.6.1-x86_64-unknown-mingw32"
+        }
+    },
+    "bin": [
+        "bin\\ghc.exe",
+        "bin\\ghci.exe",
+        "bin\\ghc-pkg.exe",
+        "bin\\haddock.exe",
+        "bin\\hp2ps.exe",
+        "bin\\hpc.exe",
+        "bin\\hsc2hs.exe",
+        "bin\\runghc.exe"
+    ],
+    "env_add_path": "lib\\bin",
+    "checkver": {
+        "url": "https://www.haskell.org/ghc/",
+        "regex": "GHC ([\\d\\.]+) Released!"
+    }
+}
