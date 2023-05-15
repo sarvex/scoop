@@ -2,11 +2,11 @@
     "architecture": {
         "32bit": {
             "hash": "sha1:f5c42db12dfe7537fccf1f363f1a883797f8c466",
-            "url": "https://dl.pstmn.io/download/version/10.13.6/windows32"
+            "url": "https://dl.pstmn.io/download/version/10.14.2/windows32"
         },
         "64bit": {
-            "hash": "sha1:b1efe0006217bc6fa94ec09ecc34077b29049f4b",
-            "url": "https://dl.pstmn.io/download/version/10.13.6/windows64"
+            "hash": "sha1:133f41c568aa3f23b3218e937d575cf317875b2f",
+            "url": "https://dl.pstmn.io/download/version/10.14.2/windows64"
         }
     },
     "autoupdate": {
@@ -45,5 +45,5 @@
             "Postman"
         ]
     ],
-    "version": "10.13.6"
+    "version": "10.14.2"
 }
