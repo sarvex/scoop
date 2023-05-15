@@ -20,19 +20,19 @@ function Export-FontManifest {
   Param (
     [ValidateNotNullOrEmpty()]
     [string] $Name,
-    [ValidateSet('NF', 'NF-Var', 'NF-Mono', 'NF-Prop')]
+    [ValidateSet('nerd-font', 'nerd-font-variable', 'nerd-font-mono', 'nerd-font-proportional')]
     [string] $Variant,
     [switch] $OverwriteExisting
   )
 
   $description = "Nerd Fonts patched '$Name' Font family."
-  if ($Variant -eq 'NF') {
+  if ($Variant -eq 'nerd-font') {
     $description += ' (Complete version)'
-  } elseif ($Variant -eq 'NF-Var') {
+  } elseif ($Variant -eq 'nerd-font-variable') {
     $description += ' (Normal version, Nerd Fonts Symbol/Icon could be 1 or 2 cell wide)'
-  } elseif ($Variant -eq 'NF-Mono') {
+  } elseif ($Variant -eq 'nerd-font-mono') {
     $description += ' (Monospace version, Nerd Fonts Symbol/Icon will be always 1 cell wide)'
-  } elseif ($Variant -eq 'NF-Prop') {
+  } elseif ($Variant -eq 'nerd-font-proportional') {
     $description += ' (Proportional version, for GUI usecases)'
   }
 
@@ -40,11 +40,11 @@ function Export-FontManifest {
   $path = "$PSScriptRoot\..\bucket\$fullName.json"
 
   $filter = "'*NerdFont*'"
-  if ($Variant -eq 'NF-Var') {
+  if ($Variant -eq 'nerd-font-variable') {
     $filter = "'*NerdFont-*'"
-  } elseif ($Variant -eq 'NF-Mono') {
+  } elseif ($Variant -eq 'nerd-font-mono') {
     $filter = "'*NerdFontMono-*'"
-  } elseif ($Variant -eq 'NF-Prop') {
+  } elseif ($Variant -eq 'nerd-font-proportional') {
     $filter = "'*NerdFontPropo-*'"
   }
 
@@ -137,7 +137,7 @@ function Export-FontManifest {
     }
     'checkver'      = 'github'
     'autoupdate'    = @{
-      'url' = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.xz"
+      'url' = "https://github.com/ryanoasis/nerd-fonts/releases/download/v`$version/${Name}.tar.xz"
     }
   }
 
@@ -166,64 +166,64 @@ function Export-FontManifest {
 # This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
     "3270",
-    "Agave",
-    "AnonymousPro",
-    "Arimo",
-    "AurulentSansMono",
-    "BigBlueTerminal",
-    "BitstreamVeraSansMono",
-    "CascadiaCode",
-    "CodeNewRoman",
-    "ComicShannsMono",
-    "Cousine",
-    "DaddyTimeMono",
-    "DejaVuSansMono",
-    "DroidSansMono",
-    "FantasqueSansMono",
-    "FiraCode",
-    "FiraMono",
-    "Go-Mono",
-    "Gohu",
-    "Hack",
-    "Hasklig",
-    "HeavyData",
-    "Hermit",
-    "iA-Writer",
-    "IBMPlexMono",
-    "Inconsolata",
-    "InconsolataGo",
-    "InconsolataLGC",
-    "Iosevka",
-    "IosevkaTerm",
-    "JetBrainsMono",
-    "Lekton",
-    "LiberationMono",
-    "Lilex",
-    "Meslo",
-    "Monofur",
-    "Monoid",
-    "Mononoki",
-    "MPlus",
-    "Noto",
-    "OpenDyslexic",
-    "Overpass",
-    "ProFont",
-    "ProggyClean",
-    "RobotoMono",
-    "ShareTechMono",
-    "SourceCodePro",
-    "SpaceMono",
-    "Terminus",
-    "Tinos",
-    "Ubuntu",
-    "UbuntuMono",
-    "VictorMono"
+    "agave",
+    "anonymous-pro",
+    "arimo",
+    "aurulent-sans-mono",
+    "big-blue-terminal",
+    "bitstream-vera-sans-mono",
+    "cascadia-code",
+    "code-new-roman",
+    "comic-shanns-mono",
+    "cousine",
+    "daddy-time-mono",
+    "dejavu-sans-mono",
+    "droid-sans-mono",
+    "fantasque-sans-mono",
+    "fira-code",
+    "fira-mono",
+    "go-mono",
+    "gohu",
+    "hack",
+    "hasklig",
+    "heavy-data",
+    "hermit",
+    "ia-writer",
+    "ibm-plex-mono",
+    "inconsolata",
+    "inconsolata-go",
+    "inconsolata-lgc",
+    "iosevka",
+    "iosevka-term",
+    "jetbrains-mono",
+    "lekton",
+    "liberation-mono",
+    "lilex",
+    "meslo",
+    "monofur",
+    "monoid",
+    "mononoki",
+    "m-plus",
+    "noto",
+    "open-dyslexic",
+    "overpass",
+    "pro-font",
+    "proggy-clean",
+    "roboto-mono",
+    "share-tech-mono",
+    "source-code-pro",
+    "space-mono",
+    "terminus",
+    "tinos",
+    "ubuntu",
+    "ubuntu-mono",
+    "victor-mono"
 )
 
 # Generate manifests
 $fontNames | ForEach-Object {
-  Export-FontManifest -Name $_ -Variant NF -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant NF-Var -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant NF-Mono -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant NF-Prop -OverwriteExisting:$OverwriteExisting
+  Export-FontManifest -Name $_ -Variant nerd-font -OverwriteExisting:$OverwriteExisting
+  Export-FontManifest -Name $_ -Variant nerd-font-variable -OverwriteExisting:$OverwriteExisting
+  Export-FontManifest -Name $_ -Variant nerd-font-mono -OverwriteExisting:$OverwriteExisting
+  Export-FontManifest -Name $_ -Variant nerd-font-proportional -OverwriteExisting:$OverwriteExisting
 }
