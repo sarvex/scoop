@@ -5,7 +5,7 @@
     "bin": "mp3tag.exe",
     "checkver": "Mp3tag\\s+v([\\w.]+)",
     "description": "Powerful and easy-to-use tool to edit metadata of audio files.",
-    "hash": "0f85a75d74a89efe2baeec203eb355d22dae8c3572c4a22bfe7ccfa4c2e1198b",
+    "hash": "cdc540b1d3f2f53366bfb97ee6d5e93fcfc07d993251d00d19f29cfa9f2921d3",
     "homepage": "https://www.mp3tag.de",
     "license": {
         "identifier": "Freeware",
@@ -26,6 +26,6 @@
             "Mp3tag"
         ]
     ],
-    "url": "https://download.mp3tag.de/mp3tagv320setup.exe#/dl.7z",
-    "version": "3.20"
+    "url": "https://download.mp3tag.de/mp3tagv321setup.exe#/dl.7z",
+    "version": "3.21"
 }
