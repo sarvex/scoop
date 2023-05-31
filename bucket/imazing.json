@@ -1,5 +1,5 @@
 {
-    "version": "2.16.9",
+    "version": "2.17.2",
     "description": "Manage your iPhone. Your way.",
     "license": "Proprietary",
     "homepage": "https://imazing.com/",
@@ -11,8 +11,8 @@
             "beerpiss/itunes64-older-video-cards-np"
         ]
     },
-    "url": "https://downloads.imazing.com/windows/iMazing/2.16.9/iMazing_2.16.9.exe",
-    "hash": "4bc641cab1cf7260b55cd2564db529b2eed88d266def0ea7c0f587db5f32498c",
+    "url": "https://downloads.imazing.com/windows/iMazing/2.17.2/iMazing_2.17.2.exe",
+    "hash": "f63cb91b25ce5d81072333fc7a2c2e27b3de81492dd0ba13b4410b3764924314",
     "innosetup": true,
     "architecture": {
         "64bit": {
