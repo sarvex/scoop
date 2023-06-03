@@ -3,7 +3,6 @@
     "description": "Atom. The hackable text editor",
     "homepage": "https://atom.io/",
     "license": "MIT",
-    "changelog": "https://github.com/atom/atom/releases",
     "architecture": {
         "64bit": {
             "url": "https://github.com/atom/atom/releases/download/v1.60.0/atom-x64-1.60.0-full.nupkg",
