@@ -161,7 +161,7 @@ function Export-FontManifest {
 #     scoop install jq
 #     scoop install busybox-lean
 #
-#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | busybox grep ".tar.xz" | busybox sed 's/^"/    "/; s/.tar.xz"/",/; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d'
+#     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | grep ".tar.xz" | sed 's/^"/    "/; s/.tar.xz"/",/; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d'
 #
 # This is useful to keep $fontNames list up to date with nerd-fonts latest release
 $fontNames = @(
@@ -223,7 +223,7 @@ $fontNames = @(
 # Generate manifests
 $fontNames | ForEach-Object {
   Export-FontManifest -Name $_ -Variant nerd-font -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant nerd-font-variable -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant nerd-font-mono -OverwriteExisting:$OverwriteExisting
-  Export-FontManifest -Name $_ -Variant nerd-font-proportional -OverwriteExisting:$OverwriteExisting
+  # Export-FontManifest -Name $_ -Variant nerd-font-variable -OverwriteExisting:$OverwriteExisting
+  # Export-FontManifest -Name $_ -Variant nerd-font-mono -OverwriteExisting:$OverwriteExisting
+  # Export-FontManifest -Name $_ -Variant nerd-font-proportional -OverwriteExisting:$OverwriteExisting
 }
