@@ -1,10 +1,10 @@
 {
-    "version": "0.40.6",
+    "version": "0.41.0",
     "description": "Sarasa Gothic, a CJK (Chinese-Japanese-Korean) programming font based on Iosevka and Source Han Sans. (unhinted TTC version)",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.40.6/sarasa-gothic-ttc-unhinted-0.40.6.7z",
-    "hash": "fc7c95d3e5df070915b71f17c66d9ce75245b636f3f4ab976059a42de919bf6f",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.41.0/sarasa-gothic-ttc-unhinted-0.41.0.7z",
+    "hash": "fdb874c10163ca697b7f2bf67aa36ddfa1525f375b991f59c5afb539bc2b79ea",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
