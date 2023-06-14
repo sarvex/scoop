@@ -1,9 +1,5 @@
 {
 	"autoupdate": {
-		"hash": {
-			"find": "href=\"#noto-emoji\">.+?MD5 hash is ([A-Fa-f0-9]{32})",
-			"url": "https://github.com/adobe-fonts/source-han-super-otc"
-		},
 		"url": "https://github.com/googlefonts/noto-emoji/archive/refs/tags/v$Version.tar.gz"
 	},
 	"checkver": "github",
