@@ -36,5 +36,8 @@
     "connectionId": "sarvex",
     "projectKey": "sarvex_scoop"
   },
-  "sarif-viewer.connectToGithubCodeScanning": "on"
+  "sarif-viewer.connectToGithubCodeScanning": "on",
+  "cSpell.words": [
+    "neovim"
+  ]
 }
