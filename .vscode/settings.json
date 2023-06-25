@@ -38,6 +38,10 @@
   },
   "sarif-viewer.connectToGithubCodeScanning": "on",
   "cSpell.words": [
+    "autoupdate",
+    "checkver",
+    "doxywizard",
+    "innosetup",
     "neovim"
   ]
 }
