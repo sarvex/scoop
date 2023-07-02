@@ -1,6 +1,6 @@
 {
     "version": "1.2.3.0",
-    "description": "EdgeDeflector. A small helper application that intercepts URIs that force-open web links in Microsoft Edge and redirects it to the system’s default web browser",
+    "description": "EdgeDeflector. A small helper application that intercepts URIs that force-open web links in Microsoft Edge and redirects it to the system's default web browser",
     "homepage": "https://github.com/da2x/EdgeDeflector",
     "license": "MIT",
     "changelog": "https://github.com/da2x/EdgeDeflector/releases",

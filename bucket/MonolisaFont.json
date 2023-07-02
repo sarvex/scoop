@@ -1,7 +1,7 @@
 {
     "homepage": "https://www.monolisa.dev/releases",
     "version": "1.700",
-    "description": " MonoLisa was designed by professionals to improve developers’ productivity and reduce fatigue.",
+    "description": " MonoLisa was designed by professionals to improve developers' productivity and reduce fatigue.",
     "checkver": {
         "url": "https://www.dropbox.com/s/yz2e4f7jiwatmqb/monolisa.html?dl=1",
         "re": ">\\s+version (.*?)\\s+<"
