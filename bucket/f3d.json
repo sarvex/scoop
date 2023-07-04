@@ -8,8 +8,8 @@
         "github": "https://github.com/f3d-app/f3d"
     },
     "description": "Fast and minimalist 3D viewer",
-    "extract_dir": "F3D-2.0.0-Windows-x86_64",
-    "hash": "d3d6026c03d2a3ca402a56953114709d26108bb98825ce7b634f344cdada7fba",
+    "extract_dir": "F3D-2.1.0-Windows-x86_64",
+    "hash": "786047e9e054a8f836a0697d074323c5451d7a1dae38ae2644e927f05a76b002",
     "homepage": "https://github.com/f3d-app/f3d",
     "license": "BSD-3-Clause",
     "shortcuts": [
@@ -18,6 +18,6 @@
             "F3D"
         ]
     ],
-    "url": "https://github.com/f3d-app/f3d/releases/download/v2.0.0/F3D-2.0.0-Windows-x86_64.zip",
-    "version": "2.0.0"
+    "url": "https://github.com/f3d-app/f3d/releases/download/v2.1.0/F3D-2.1.0-Windows-x86_64.zip",
+    "version": "2.1.0"
 }
