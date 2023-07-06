@@ -14,7 +14,6 @@
     }
   ],
   "files.exclude": {
-    "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
@@ -23,15 +22,15 @@
   },
   "workbench.colorCustomizations": {
     "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#ea17ec",
-    "titleBar.activeBackground": "#bf10c0",
+    "sash.hoverBorder": "#ee5935",
+    "titleBar.activeBackground": "#dd3a13",
     "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#bf10c099",
+    "titleBar.inactiveBackground": "#dd3a1399",
     "titleBar.inactiveForeground": "#e7e7e799",
-    "tab.activeBorder": "#ea17ec",
-    "titleBar.border": "#bf10c0"
+    "tab.activeBorder": "#ee5935",
+    "titleBar.border": "#dd3a13"
   },
-  "peacock.color": "#bf10c0",
+  "peacock.color": "#dd3a13",
   "sonarlint.connectedMode.project": {
     "connectionId": "sarvex",
     "projectKey": "sarvex_scoop"
