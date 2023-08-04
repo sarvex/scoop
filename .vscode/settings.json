@@ -29,10 +29,7 @@
     "statusBarItem.remoteForeground": "#e7e7e7",
     "statusBar.border": "#dd3a13",
     "tab.activeBorder": "#ee5935",
-    "panel.border": "#ee5935",
-    "statusBar.debuggingBackground": "#13b6dd",
-    "statusBar.debuggingBorder": "#13b6dd",
-    "statusBar.debuggingForeground": "#15202b"
+    "panel.border": "#ee5935"
   },
   "peacock.color": "#dd3a13",
   "sonarlint.connectedMode.project": {
