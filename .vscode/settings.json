@@ -21,15 +21,15 @@
     "**/tmp": true
   },
   "workbench.colorCustomizations": {
-    "sash.hoverBorder": "#ee5935",
-    "statusBar.background": "#dd3a13",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#ee5935",
-    "statusBarItem.remoteBackground": "#dd3a13",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "tab.activeBorder": "#ee5935"
+    "sash.hoverBorder": "#faccc6",
+    "statusBar.background": "#f5a298",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#f07869",
+    "statusBarItem.remoteBackground": "#f5a298",
+    "statusBarItem.remoteForeground": "#15202b",
+    "tab.activeBorder": "#faccc6"
   },
-  "peacock.color": "#dd3a13",
+  "peacock.color": "#f5a298",
   "sonarlint.connectedMode.project": {
     "connectionId": "sarvex",
     "projectKey": "sarvex_scoop"
