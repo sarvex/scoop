@@ -24,7 +24,7 @@
         "github": "https://github.com/UPBGE/upbge"
     },
     "description": "UPBGE is an open-source, 3D game engine forked from the old Blender Game Engine and deployed with Blender itself. This unified workflow is its main strength, as you can make your game from start to finish without leaving Blender.",
-    "extract_dir": "UPBGE-0.36-windows-x86_64",
+    "extract_dir": "UPBGE-0.36.1-windows-x86_64",
     "hash": "ff52a547fd27d487b31ecc5300960b93e425118f64e2a3e638aed5b6018f9cc9",
     "homepage": "https://upbge.org/",
     "license": "GPL-2.0-or-later",
@@ -35,5 +35,5 @@
         ]
     ],
     "url": "https://github.com/UPBGE/upbge/releases/download/v0.30/UPBGE-0.30-windows-x86_64.7z",
-    "version": "0.36"
+    "version": "0.36.1"
 }
