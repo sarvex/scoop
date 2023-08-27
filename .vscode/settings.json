@@ -26,8 +26,7 @@
     "statusBar.foreground": "#15202b",
     "statusBarItem.hoverBackground": "#f07869",
     "statusBarItem.remoteBackground": "#f5a298",
-    "statusBarItem.remoteForeground": "#15202b",
-    "tab.activeBorder": "#faccc6"
+    "statusBarItem.remoteForeground": "#15202b"
   },
   "peacock.color": "#f5a298",
   "sonarlint.connectedMode.project": {
