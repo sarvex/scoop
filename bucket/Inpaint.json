@@ -1,6 +1,6 @@
 {
     "homepage": "https://www.theinpaint.com/",
-    "version": "10.0",
+    "version": "9.2",
     "license": "shareware",
     "url": "https://www.theinpaint.com/download/InpaintSetup.exe",
     "innosetup": true,
