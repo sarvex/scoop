@@ -1,16 +1,16 @@
 {
     "homepage": "https://github.com/antonmedv/gofx",
     "description": "Command-line JSON processing tool",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/antonmedv/gofx/releases/download/v1.0.1/xx_windows_amd64.exe",
-            "hash": "f774a10679e2d7ca54bdbb9bb3c5cc13b8178d25bd6cc0cfdcf07dd870543022"
+            "url": "https://github.com/antonmedv/gofx/releases/download/v1.1.0/xx_windows_amd64.exe",
+            "hash": "71969f6c15d8318e12f462120025a1bc99c91884354e02e6bf19d87c5f946694"
         },
         "32bit": {
-            "url": "https://github.com/antonmedv/gofx/releases/download/v1.0.1/xx_windows_386.exe",
-            "hash": "3b1f42958c39fd8c14425333af744f0e6a57f175d7a7be35f3be0083e93340ad"
+            "url": "https://github.com/antonmedv/gofx/releases/download/v1.1.0/xx_windows_386.exe",
+            "hash": "cede6077ac0aad5aa81a9fe5aa77f80cc62ac8d8a586c99d61ba3443f40e4a56"
         }
     },
     "installer": {
