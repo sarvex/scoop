@@ -1,10 +1,10 @@
 {
     "version": "3.1.0",
-    "description": "Nerd Fonts patched 'UbuntuMono' Font family. (Complete version)",
+    "description": "Nerd Fonts patched 'CommitMono' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/UbuntuMono.tar.xz",
-    "hash": "f455168475fb1090efbe5323aac17400e80c6e7c185b08c8488c5a8118ae3b48",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.0/CommitMono.tar.xz",
+    "hash": "0623930ba8e2898bddd3abed787bec17910f1f23bc6f5e1346a06741b74d1620",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -87,6 +87,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/UbuntuMono.tar.xz"
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v$version/CommitMono.tar.xz"
     }
 }
