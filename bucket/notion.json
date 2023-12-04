@@ -1,0 +1,34 @@
+{
+    "homepage": "https://www.notion.so",
+    "description": "The all-in-one workspace for your notes, tasks, wikis, and databases.",
+    "version": "3.0.0",
+    "license": "Proprietary",
+    "url": "https://desktop-release.notion-static.com/Notion%20Setup%203.0.0.exe#/dl.7z",
+    "hash": "sha512:0abdc87f75f05602c04bbef2a14f65d566bd6b89a3d8e3a7bfa2d0386ae0ba772cc0d4a4f12f05dabaf925165962942445477f0ea68d1d8020c3e1b904c1ed9b",
+    "extract_dir": "$PLUGINSDIR",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\*\" -Exclude \"app-64.7z\"",
+            "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\"",
+            "Remove-Item \"$dir\\app-64.7z\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "Notion.exe",
+            "Notion"
+        ]
+    ],
+    "checkver": {
+        "url": "https://desktop-release.notion-static.com/latest.yml",
+        "regex": "version:\\s+([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://desktop-release.notion-static.com/Notion%20Setup%20$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    },
+    "notes": "Your Notion data are storaged in '%LOCALAPPDATA%\\Notion'."
+}
