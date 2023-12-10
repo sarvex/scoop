@@ -42,5 +42,13 @@
     "doxywizard",
     "innosetup",
     "neovim"
-  ]
+  ],
+  "vcpkg.target.preferSystemLibs": true,
+  "cmake.configureArgs": [
+    "-DVCPKG_PREFER_SYSTEM_LIBS=ON",
+    "-DVCPKG_CRT_LINKAGE=ON",
+    "-DVCPKG_MANIFEST_MODE=OFF"
+  ],
+  "vcpkg.target.useDynamicCRT": true,
+  "vcpkg.target.useManifest": false
 }
