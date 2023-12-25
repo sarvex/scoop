@@ -2,9 +2,9 @@
     "homepage": "http://www.doxygen.nl/",
     "description": "The GUI frontend of Doxygen.",
     "license": "GPL-2.0-only",
-    "version": "1.9.8",
-    "url": "http://doxygen.nl/files/doxygen-1.9.8-setup.exe",
-    "hash": "ce81056ce5944ee9826cba5069ba82935a93b6879ce87720059644258fa18b7b",
+    "version": "1.10.0",
+    "url": "http://doxygen.nl/files/doxygen-1.10.0-setup.exe",
+    "hash": "9ab44b1232b86375c71c66a4923c2e90caf9054b13d0f257630106412ac3f9cb",
     "innosetup": true,
     "bin": "bin\\doxywizard.exe",
     "shortcuts": [
