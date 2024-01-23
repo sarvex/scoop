@@ -10,9 +10,9 @@
         "xpath": "/com.android.tools.build/aapt2/@versions"
     },
     "description": "Android Asset Packaging Tool.",
-    "hash": "0bfb3ec0a8661133ad105ba0723fb227a97e987a331a63b51c366b366beaefa2",
+    "hash": "1f27f095005b74deadd0bb454d8443f9163cc378a4373e2e9ff56384fe5fc2cf",
     "homepage": "https://developer.android.com/studio/command-line/aapt2",
     "license": "Apache-2.0",
-    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/8.2.1-10154469/aapt2-8.2.1-10154469-windows.jar#/dl.7z",
-    "version": "8.2.1-10154469"
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/8.2.2-10154469/aapt2-8.2.2-10154469-windows.jar#/dl.7z",
+    "version": "8.2.2-10154469"
 }
