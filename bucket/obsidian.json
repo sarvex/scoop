@@ -1,28 +1,28 @@
 {
     "architecture": {
         "32bit": {
-            "hash": "bfbb6be48e545af81d6ea0c66ff8f41d19fcd1afc21499d44fa89c9f1241bf42",
+            "hash": "e023b6988b38269832b0b314af5a91eb7c19fe416d147f214c2cf00b47800003",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
             ],
-            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/Obsidian.1.5.3-32.exe#/dl.7z"
+            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.8/Obsidian.1.5.8-32.exe#/dl.7z"
         },
         "64bit": {
-            "hash": "6baf021a476b3731242ddc9b3d5b4a6006bc684d70fcdda1eb9ff6889da82319",
+            "hash": "c11cd0c22f98b638016dd33c7240d8544308929c7376e02eaa4bc450cbd3641d",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
             ],
-            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/Obsidian.1.5.3.exe#/dl.7z"
+            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.8/Obsidian.1.5.8.exe#/dl.7z"
         },
         "arm64": {
-            "hash": "788aab21acfeff7deb8f3642bd82ab3d3dea319183756bd488d4c762e0df941f",
+            "hash": "c3eea0d5a9806be5cd1850b341efb5a3a42cf41372883e24cb0caf1614184eed",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
                 "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse"
             ],
-            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.3/Obsidian.1.5.3-arm64.exe#/dl.7z"
+            "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.5.8/Obsidian.1.5.8-arm64.exe#/dl.7z"
         }
     },
     "autoupdate": {
@@ -53,5 +53,5 @@
             "Obsidian"
         ]
     ],
-    "version": "1.5.3"
+    "version": "1.5.8"
 }
