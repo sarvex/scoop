@@ -1,10 +1,10 @@
 {
-    "version": "1.120",
+    "version": "1.120.1",
     "description": "霞鹜尚智黑",
     "homepage": "https://github.com/lxgw/LxgwNeoXiHei",
     "license": "OFL-1.1",
-    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.120/LXGWFasmartGothic.ttf",
-    "hash": "b1bc690c587824f00aefd22504b9a855ae58bb3241d66cb35cb790910e2026c2",
+    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.120.1/LXGWFasmartGothic.ttf",
+    "hash": "8ba51dd0b3095ec3e9206aa66befdf2b0adf8da71555a30d9bac04f67a892985",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v$version/LXGWFasmartGothic.ttf"
