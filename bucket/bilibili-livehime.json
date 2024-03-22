@@ -2,11 +2,11 @@
     "homepage": "https://live.bilibili.com/liveHime",
     "description": "BiliBili Live Streaming tool",
     "license": "Unknown",
-    "version": "4.65.1.6458",
+    "version": "4.65.2.6459",
     "architecture": {
         "64bit": {
-            "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-4.65.1.6458-x64.exe",
-            "hash": "md5:066b28a712ec008a293bfb6c484892af"
+            "url": "https://dl.hdslb.com/bili/bililive/win/Livehime-Win-beta-4.65.2.6459-x64.exe",
+            "hash": "md5:8f65e7b9f5994f90c8e0d2e544ba758b"
         }
     },
     "depends": "innounp",
