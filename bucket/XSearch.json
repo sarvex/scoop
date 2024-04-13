@@ -1,7 +1,7 @@
 {
     "homepage": "https://www.easexp.com/xsearch",
     "license": "unknown",
-    "version": "0.23",
+    "version": "1.0.0",
     "url": "https://www.easexp.com/xsearch/xsearch.zip",
     "hash": "",
     "bin": "xsearch.exe",
