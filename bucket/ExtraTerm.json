@@ -1,9 +1,9 @@
 {
     "architecture": {
         "64bit": {
-            "extract_dir": "extraterm-0.71.0-windows-x64",
-            "hash": "6d250e601389a15e46d21f47a1aea125250fd702f1c64acb57bddfc3cee4e308",
-            "url": "https://github.com/sedwards2009/extraterm/releases/download/v0.71.0/extratermqt-0.71.0-windows-x64.zip"
+            "extract_dir": "extraterm-0.77.0-windows-x64",
+            "hash": "ebf0e7be31eb05b8d6a4363861979b14c1aa8cb654ac15ae29892595d3ca59b6",
+            "url": "https://github.com/sedwards2009/extraterm/releases/download/v0.77.0/extratermqt-0.77.0-windows-x64.zip"
         }
     },
     "autoupdate": {
@@ -32,5 +32,5 @@
             "Extraterm"
         ]
     ],
-    "version": "0.71.0"
+    "version": "0.77.0"
 }
