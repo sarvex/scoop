@@ -1,5 +1,5 @@
 {
-    "version": "7.34",
+    "version": "7.35",
     "description": "Yet another typical ZIP archiver",
     "homepage": "http://www.bandisoft.com/bandizip/",
     "license": {
@@ -20,7 +20,7 @@
                 "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/bandizip/Bandizip.v7.xx.x64.Patch.20201104.exe#/patch_64.exe"
             ],
             "hash": [
-                "7dc6c886308e8733bc1f9c3fd7b0861c726b907c65367554eb86495854f8f5af",
+                "324db316945d7e1711ffdb6da9278429cda81cba134747abeefeaf5eb63c0273",
                 "a4ee6db8b2dbca768ed566336810c789362b9b53a6f0ed1942412886f997dc81"
             ],
             "pre_install": [
@@ -55,7 +55,7 @@
                 "https://raw.githubusercontent.com/JaimeZeng/scoop-apps/main/scripts/bandizip/Bandizip.v7.xx.x32.Patch.20201104.exe#/patch_86.exe"
             ],
             "hash": [
-                "7dc6c886308e8733bc1f9c3fd7b0861c726b907c65367554eb86495854f8f5af",
+                "324db316945d7e1711ffdb6da9278429cda81cba134747abeefeaf5eb63c0273",
                 "e407833cee189f2a242d5a225e308c52a5e46b601e04e6a231a7203bb5bb5809"
             ],
             "pre_install": [
