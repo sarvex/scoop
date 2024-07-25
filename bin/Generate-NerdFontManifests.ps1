@@ -158,7 +158,8 @@ function Export-FontManifest {
 #
 #     scoop install curl
 #     scoop install jq
-#     scoop install busybox-lean
+#     scoop install grep
+#     scoop install sed
 #
 #     curl --silent https://api.github.com/repos/ryanoasis/nerd-fonts/releases/latest | jq '.assets[].name' | grep ".tar.xz" | sed 's/^"/    "/; s/.tar.xz"/",/; /FontPatcher/ d; /NerdFontsSymbolsOnly/ d'
 #
@@ -218,6 +219,7 @@ $fontNames = @(
     "Overpass",
     "ProFont",
     "ProggyClean",
+    "Recursive",
     "RobotoMono",
     "ShareTechMono",
     "SourceCodePro",
@@ -226,7 +228,9 @@ $fontNames = @(
     "Tinos",
     "Ubuntu",
     "UbuntuMono",
-    "VictorMono"
+    "UbuntuSans",
+    "VictorMono",
+    "ZedMono"
 )
 
 # Generate manifests
