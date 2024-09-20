@@ -2,10 +2,10 @@
     "homepage": "https://www.swift.org/",
     "description": "The Swift Programming Language",
     "license": "Apache-2.0",
-    "version": "snapshot-2024-09-06-a",
+    "version": "snapshot-2024-09-18-a",
     "architecture": {
         "64bit": {
-            "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2024-09-06-a/swift-DEVELOPMENT-SNAPSHOT-2024-09-06-a-windows10.exe",
+            "url": "https://download.swift.org/development/windows10/swift-DEVELOPMENT-SNAPSHOT-2024-09-18-a/swift-DEVELOPMENT-SNAPSHOT-2024-09-18-a-windows10.exe",
             "hash": "c87fbf6db0f01f31c28476614678d3e406a29842182172840f8d9eaee00fa929"
         }
     },
