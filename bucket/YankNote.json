@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "d478315606c4691e83ec066993b4d6f155e135e5125df1b1442ced37189ab217",
-            "url": "https://github.com/purocean/yn/releases/download/v3.76.2/Yank-Note-win-x64-3.76.2.zip"
+            "hash": "644747abeb15ec73f3c56b09750077e781ef408462ad380638b5a12c9a40027a",
+            "url": "https://github.com/purocean/yn/releases/download/v3.77.1/Yank-Note-win-x64-3.77.1.zip"
         }
     },
     "autoupdate": {
@@ -25,5 +25,5 @@
             "Yank Note"
         ]
     ],
-    "version": "3.76.2"
+    "version": "3.77.1"
 }
