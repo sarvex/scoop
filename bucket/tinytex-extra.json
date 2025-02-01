@@ -1,10 +1,10 @@
 {
-    "version": "2025.01",
+    "version": "2025.02",
     "description": "A lightweight, cross-platform, portable, and easy-to-maintain LaTeX distribution based on TeX Live.",
     "homepage": "https://yihui.org/tinytex/",
     "license": "https://tug.org/texlive/LICENSE.TL",
-    "url": "https://github.com/yihui/tinytex-releases/releases/download/v2025.01/TinyTeX-v2025.01.zip",
-    "hash": "85388abed1cbe3c7e19725f378d856947ce27f67c305cc91d0b70a934f408d70",
+    "url": "https://github.com/yihui/tinytex-releases/releases/download/v2025.02/TinyTeX-v2025.02.zip",
+    "hash": "eebfcce48f31b40dbc4d256d561c271f9c4dfbbfebfb4908f42cde8cce8c3b30",
     "extract_dir": "TinyTeX",
     "env_add_path": "bin\\win32",
     "persist": "texmf-config",
