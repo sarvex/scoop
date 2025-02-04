@@ -1,9 +1,9 @@
 {
     "homepage": "https://www.picpick.org/",
-    "version": "7.3.0",
+    "version": "7.3.1",
     "license": "freeware for personal use",
     "url": "https://www.picpick.org/releases/latest/picpick_portable.zip",
-    "hash": "b1f830b9647ef84b60a51cee7bc8eaf8884c6c6dd07547035ea717a8ad33eebd",
+    "hash": "8724e48abd4a715164191a2857ab1c9a9d3e95a1cf0907b8f65349a102e03b90",
     "bin": "picpick.exe",
     "persist": [
         "picpick.ini",
