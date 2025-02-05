@@ -5,14 +5,14 @@
         },
         "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/v$version/wgsl_analyzer-win32-x64.exe"
     },
-    "version": "0.9.3",
+    "version": "0.9.4",
     "description": "a language server implementation for the WGSL shading language ",
     "homepage": "https://github.com/wgsl-analyzer/wgsl-analyzer",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/v0.9.3/wgsl_analyzer-win32-x64.exe",
-            "hash": "656f93de5768ad465097eadadeafb37cbb27725dbe0adf199e665e7fe1451dbd",
+            "url": "https://github.com/wgsl-analyzer/wgsl-analyzer/releases/download/v0.9.4/wgsl_analyzer-win32-x64.exe",
+            "hash": "dd25aa71a2703fc994e0294805885eb5193fa8758ea7193a8eb873f48fb2307c",
             "extract_dir": "wgsl-analyzer_2022_09_13_windows\\wgsl-analyzer-2022.09.13"
         }
     },
