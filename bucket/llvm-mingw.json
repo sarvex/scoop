@@ -1,22 +1,22 @@
 {
     "homepage": "https://github.com/mstorsjo/llvm-mingw",
     "description": "An LLVM/Clang/LLD based mingw-w64 GNU toolchain",
-    "version": "20.1.1-20250319",
+    "version": "21.1.8-20251216",
     "license": "ISC",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250319/llvm-mingw-20250319-ucrt-x86_64.zip",
-            "hash": "990d407490dac9ef171a7d1f27b8c247d42543378d53454ef3f909947f7883ae",
-            "extract_dir": "llvm-mingw-20250319-ucrt-x86_64"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20251216/llvm-mingw-20251216-ucrt-x86_64.zip",
+            "hash": "2d96a4b758f7f8deaec5065833fe025aa53cfc5f704d0524002510984da0ccf4",
+            "extract_dir": "llvm-mingw-20251216-ucrt-x86_64"
         },
         "32bit": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250319/llvm-mingw-20250319-ucrt-i686.zip",
-            "hash": "4b6d46e6eff3263a769b4f154fe82c1fc2bd8bcf5e667ee56979aae328600c19",
-            "extract_dir": "llvm-mingw-20250319-ucrt-i686"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20251216/llvm-mingw-20251216-ucrt-i686.zip",
+            "hash": "c6b17faa808f412ec8ef2086994b3fc3c16e8c7292bbaf275254d0acfa18f54d",
+            "extract_dir": "llvm-mingw-20251216-ucrt-i686"
         },
         "arm64": {
-            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20250319/llvm-mingw-20250319-ucrt-aarch64.zip",
-            "hash": "5c13a9c82a1e3782789ec24220ad17c3804c2d53decbc795c11dc68adefc6055"
+            "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20251216/llvm-mingw-20251216-ucrt-aarch64.zip",
+            "hash": "60c06bd255feb2ef1eb6fce7ee6b307d8f78ee6639660f49861c7c10a8a86164"
         }
     },
     "env_add_path": "bin",
