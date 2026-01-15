@@ -1,15 +1,15 @@
 {
     "homepage": "http://www.rainlendar.net/",
     "license": "freeware",
-    "version": "2.22.0",
+    "version": "2.23.0",
     "architecture": {
         "64bit": {
-            "url": "https://www.rainlendar.net/download/2.22.0/Rainlendar-Lite-2.22.0-64bit.exe",
-            "hash": "7f88cb0a201812299199c090f94b1b1eec6fb1518c39374a325db23937faa600"
+            "url": "https://www.rainlendar.net/download/2.23.0/Rainlendar-Lite-2.23.0-64bit.exe",
+            "hash": "16018838541af24616304f41c718cb434b6a753cfb8fb22589041b2441f03715"
         },
         "32bit": {
-            "url": "https://www.rainlendar.net/download/2.22.0/Rainlendar-Lite-2.22.0-32bit.exe",
-            "hash": "1bc4460ad29d74509e39453ce8bc9d9279d92d516fd0f6b8a6dcd0928b037bc8"
+            "url": "https://www.rainlendar.net/download/2.23.0/Rainlendar-Lite-2.23.0-32bit.exe",
+            "hash": "72162803496ca34e3a0d2c02cf6e6fbc541cbffe972abf319f73641934519a3d"
         }
     },
     "bin": "Rainlendar2.exe",
