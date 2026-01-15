@@ -36,7 +36,7 @@
     },
     "depends": "innounp",
     "description": "Beyond Compare is a multi-platform utility that combines directory compare and file compare functions in one package. Use it to manage source code, keep directories in sync, compare program output, etc.",
-    "hash": "36fef8f38320c8adadfb5b1e86fb2ebc0b229d8d0b5d369cc5935ff9c2bd17ba",
+    "hash": "ac4220d3ef13a4253a7a4b408c14096e34da14027973b8f960f8b9b3945736aa",
     "homepage": "https://www.scootersoftware.com",
     "license": {
         "identifier": "Shareware",
@@ -53,6 +53,6 @@
             "Clipboard Compare"
         ]
     ],
-    "url": "https://www.scootersoftware.com/BCompare-5.0.6.30713.exe",
-    "version": "5.0.6.30713"
+    "url": "https://www.scootersoftware.com/BCompare-5.1.7.31736.exe",
+    "version": "5.1.7.31736"
 }
