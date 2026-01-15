@@ -7,7 +7,7 @@
         "regex": "Aba Search and Replace ([\\d.]+) installer",
         "url": "https://www.abareplace.com/download/"
     },
-    "hash": "1b2846a1240a7c7633921b81224b5ef5c07ad06aa4de382c6adda92801f80852",
+    "hash": "f3d0c580e11f0be91cfab882ab7d4e1ef6027c11a99e5262d1684437b6d2d619",
     "homepage": "https://www.abareplace.com/",
     "license": "shareware",
     "persist": [
@@ -20,6 +20,6 @@
             "Aba Search & Replace"
         ]
     ],
-    "url": "https://www.abareplace.com/AbaReplace282portable.zip",
-    "version": "2.8.2"
+    "url": "https://www.abareplace.com/AbaReplace285portable.zip",
+    "version": "2.8.5"
 }
