@@ -1,10 +1,10 @@
 {
     "homepage": "http://yabasic.de/",
     "license": "MIT",
-    "version": "2.91.1",
+    "version": "2.91.4",
     "extract_dir": "yabasic-zip",
-    "url": "http://yabasic.de/download/yabasic-2.91.1.zip",
-    "hash": "7b32645bc19a6c8b11741efb62de7a3595a2685fd4d1b0002621ecbe54505b40",
+    "url": "http://yabasic.de/download/yabasic-2.91.4.zip",
+    "hash": "dca0a9e80f5ba9d67f50fc0cd1950adbd7dbdfa1672e83db97bd068388305d8c",
     "bin": "yabasic.exe",
     "checkver": "<span id=\"sign_version\"[\\w\\W]+?([\\d.]+)</span>",
     "autoupdate": {
