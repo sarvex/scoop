@@ -1,10 +1,10 @@
 {
-    "version": "1.215",
+    "version": "1.239",
     "description": "A Chinese sans-serif font derived from IPAex Gothic. 一款衍生于「IPAexゴシック」的中文黑体字型。",
     "homepage": "https://github.com/lxgw/LxgwNeoXiHei",
     "license": "IPA",
-    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.215/LXGWNeoXiHei.ttf",
-    "hash": "68198f14b7368247fed5b23ce463eb3959858e0702caf5ddfff38f6ca8715503",
+    "url": "https://github.com/lxgw/LxgwNeoXiHei/releases/download/v1.239/LXGWNeoXiHei.ttf",
+    "hash": "c7c6613feba63234844998dfd11daf21bb3372ce88525115219280403db40f16",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
