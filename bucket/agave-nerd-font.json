@@ -1,10 +1,10 @@
 {
-    "version": "3.3.0",
+    "version": "3.4.0",
     "description": "Nerd Fonts patched 'Agave' Font family. (Complete version)",
     "homepage": "https://github.com/ryanoasis/nerd-fonts",
     "license": "MIT",
-    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Agave.tar.xz",
-    "hash": "2f7939592934ac02ed74e90556a7e13e95ca621b6e44df31db729ae6930f9cb4",
+    "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Agave.tar.xz",
+    "hash": "fe4879b0cff2d33d7fb08d1c8ba4e0cad9f44843644fe284fda1e89addf9c4ab",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
