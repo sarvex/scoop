@@ -1,8 +1,8 @@
 {
     "architecture": {
         "64bit": {
-            "hash": "9e0d7d08d9d74d1efb2c4d0e78370084a57241266c00ed8fc6709aaa412915c7",
-            "url": "https://github.com/aptos-labs/aptos-core/releases/download/aptos-cli-v6.2.0/aptos-cli-6.2.0-Windows-x86_64.zip"
+            "hash": "c44d0190cff6e878c09ef0854185b1b0dd62ac2429f1aea41a21e1edab54e2e1",
+            "url": "https://github.com/aptos-labs/aptos-core/releases/download/aptos-cli-v7.14.1/aptos-cli-7.14.1-Windows-x86_64.zip"
         }
     },
     "autoupdate": {
@@ -20,5 +20,5 @@
     "description": "Developing on the Aptos blockchain, debugging, and for node operations.",
     "homepage": "https://aptos.dev/",
     "license": "Apache-2.0",
-    "version": "6.2.0"
+    "version": "7.14.1"
 }
