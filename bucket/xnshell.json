@@ -1,5 +1,5 @@
 {
-    "version": "4.1.11",
+    "version": "4.2.5",
     "description": "XnShell is a powerful Shell extension for Windows ™ Explorer, allowing you to preview and perform various operations within Windows Explorer context menu.",
     "homepage": "https://www.xnview.com/en/xnshell",
     "license": "Freeware",
@@ -11,7 +11,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.xnview.com/XnShellEx64.zip",
-            "hash": "9242364a8bcffeccb33767519d28d08f885b65229aaf78811391326fe306533b",
+            "hash": "5fa44cd1c449537c9e733eb5b6ce9c1f9c617fa2156cef205e02ca8c444362dd",
             "installer": {
                 "script": "sudo regsvr32 \"$dir\\XnViewShellExt64.dll\""
             },
@@ -21,7 +21,7 @@
         },
         "32bit": {
             "url": "https://download.xnview.com/XnShellEx.zip",
-            "hash": "7b3c197e930d978312c01097b798143c2fec546e408490282a62060020b0b71e",
+            "hash": "9263e805893452c10d7a136822cab5d50cd7a22a20f72a469202e573486370ec",
             "installer": {
                 "script": "sudo regsvr32 \"$dir\\XnViewShellExt.dll\""
             },
