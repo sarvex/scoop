@@ -1,15 +1,15 @@
 {
     "homepage": "https://www.xnview.com/en/nconvert/",
-    "version": "7.220",
+    "version": "7.230",
     "license": "freeware",
     "architecture": {
         "64bit": {
             "url": "http://download.xnview.com/NConvert-win64.zip",
-            "hash": "7071f11d2c41e77602a46c951d79a633ca8ee9d7de87bd0bbfa2a42c1fcd59d9"
+            "hash": "d4b4c438b7c73f4f2976ae9c4c97d45d47836366351b57801331514ea3271e57"
         },
         "32bit": {
             "url": "http://download.xnview.com/NConvert-win.zip",
-            "hash": "d9c17d052e33bcd107851125233ec4844f6bf356e899f8fc316ad44425829cb1"
+            "hash": "6f2509d9b173ee45c8f653b2fc4beb4f4d094ffa82a59580f9478c7aff513147"
         }
     },
     "extract_dir": "XnView",
