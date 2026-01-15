@@ -1,8 +1,8 @@
 {
     "architecture": {
         "32bit": {
-            "hash": "087ff0e7383f385f40f8543e488e412097a49cd96f597112089303e719356af1",
-            "url": "https://github.com/amadvance/advancemame/releases/download/v4.0/advancemame-4.0-windows-x86.zip"
+            "hash": "18ba2d37fa638eab85b41c782074b61658950a8a1e33f6050b533214545a57c7",
+            "url": "https://github.com/amadvance/advancemame/releases/download/v5.0/advancemame-5.0-windows-x86.zip"
         }
     },
     "autoupdate": {
@@ -23,5 +23,5 @@
     },
     "homepage": "http://www.advancemame.it/",
     "license": "GPL-3.0-only",
-    "version": "4.0"
+    "version": "5.0"
 }
