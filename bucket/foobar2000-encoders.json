@@ -1,12 +1,12 @@
 {
-    "version": "2026-01-22",
+    "version": "2026-03-13",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.foobar2000.org/license"
     },
     "homepage": "https://www.foobar2000.org/encoderpack",
-    "url": "https://www.videohelp.com/download/Free_Encoder_Pack-2026-01-22.exe#/dl.7z",
-    "hash": "2f6cee8a6803e760ebe62bd85efedfac4470d8b7a0781c4a0abfaf70d06df23a",
+    "url": "https://www.videohelp.com/download/Free_Encoder_Pack-2026-03-13.exe#/dl.7z",
+    "hash": "9354b4578df486fcc4a86e7b105b9e413879389d9bcd4b1b04f5d504f468561a",
     "depends": "sgs-bucket/foobar2000",
     "extract_to": "encoders",
     "post_install": "Copy-Item \"$dir\\encoders\" $(versiondir 'foobar2000' 'current' $global) -Recurse -Force",
